@@ -1,0 +1,132 @@
+[
+  {
+    "id": "job-001",
+    "title": "ライフスタイル系YouTube 週2本編集（5〜10分）",
+    "clientName": "ライフスタイル系YouTuber A",
+    "reward": 15000,
+    "estimatedHours": 5,
+    "hourlyRate": 3000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 85,
+    "revisionAverage": 1,
+    "tags": ["短尺", "テロップあり", "BGMあり"],
+    "cautionTags": [],
+    "fitReasonShort": "継続率高・返信速・修正少",
+    "goodPoints": [
+      "初心者でも対応できる難易度",
+      "継続案件で安定収入が見込める",
+      "返信が早く進めやすい"
+    ],
+    "cautionPoints": [
+      "時給がやや低め（3,000円/h）",
+      "週2本のペースを守る必要あり"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/0000001"
+  },
+  {
+    "id": "job-002",
+    "title": "ビジネス系YouTube 長尺動画編集（20〜30分）",
+    "clientName": "コンサル会社 B社",
+    "reward": 30000,
+    "estimatedHours": 8,
+    "hourlyRate": 3750,
+    "isContinuous": false,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 60,
+    "revisionAverage": 3,
+    "tags": ["長尺", "SE多め", "図解あり"],
+    "cautionTags": ["長尺", "テロップ多", "修正多"],
+    "fitReasonShort": "単価は良いがテロップ多め・修正多",
+    "goodPoints": [
+      "単価が高く一本で収入になる",
+      "スキルアップに繋がる作業量"
+    ],
+    "cautionPoints": [
+      "修正が多く消耗しやすい",
+      "継続性が低くリピートは期待しにくい",
+      "長尺のため作業時間がかかる"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/0000002"
+  },
+  {
+    "id": "job-003",
+    "title": "TikTok・Reels向けショート動画編集（1分以内）",
+    "clientName": "インフルエンサー C",
+    "reward": 5000,
+    "estimatedHours": 1,
+    "hourlyRate": 5000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 90,
+    "revisionAverage": 1,
+    "tags": ["ショート", "縦型", "テンポ重視"],
+    "cautionTags": [],
+    "fitReasonShort": "継続あり・時給高・作業軽め",
+    "goodPoints": [
+      "時給換算が高い",
+      "短時間で完結し隙間時間に対応可能",
+      "継続率が高く安定している"
+    ],
+    "cautionPoints": [
+      "1本あたりの報酬は低め",
+      "テンポ感のセンスが求められる"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/0000003"
+  },
+  {
+    "id": "job-004",
+    "title": "企業PR動画編集（3〜5分・ナレーション・SE込み）",
+    "clientName": "中小企業 D社",
+    "reward": 80000,
+    "estimatedHours": 20,
+    "hourlyRate": 4000,
+    "isContinuous": false,
+    "difficulty": "advanced",
+    "responseSpeed": "slow",
+    "continuationRate": 40,
+    "revisionAverage": 5,
+    "tags": ["企業案件", "ナレーション", "SE", "カラグレ"],
+    "cautionTags": ["修正多", "返信遅め", "企業案件"],
+    "fitReasonShort": "高単価だが修正多・返信遅め",
+    "goodPoints": [
+      "高単価で実績になる",
+      "企業案件の経験が積める"
+    ],
+    "cautionPoints": [
+      "修正回数が多く消耗しやすい",
+      "返信が遅くスケジュール管理が難しい",
+      "上級者向けスキルが必要"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/0000004"
+  },
+  {
+    "id": "job-005",
+    "title": "教育系YouTube 解説動画編集（週1本・10〜15分）",
+    "clientName": "オンラインスクール E",
+    "reward": 20000,
+    "estimatedHours": 6,
+    "hourlyRate": 3333,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 80,
+    "revisionAverage": 2,
+    "tags": ["教育系", "図解", "週1本"],
+    "cautionTags": ["テロップ多", "長め"],
+    "fitReasonShort": "継続ありだが工数重め・テロップ多",
+    "goodPoints": [
+      "継続率が高く安定収入になりやすい",
+      "週1本ペースで無理なく続けられる",
+      "内容が明確で迷いにくい"
+    ],
+    "cautionPoints": [
+      "図解・テロップ作成など追加作業あり",
+      "時給は平均的（3,333円/h）"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/0000005"
+  }
+]

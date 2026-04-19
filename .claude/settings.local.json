@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(cmd.exe /c \"where npm\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(claude:*)",
+      "Bash(npx tsc:*)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(npm run:*)",
+      "WebFetch(domain:crowdworks.jp)",
+      "Bash(node:*)",
+      "Bash(npx --prefix \"C:/Users/sotas/Desktop/safeworks-beta\" tsc --noEmit)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(cmd /c \"npx tsc --noEmit 2>&1\")",
+      "Bash(cmd:*)",
+      "Bash(npm install *)"
+    ]
+  }
+}
