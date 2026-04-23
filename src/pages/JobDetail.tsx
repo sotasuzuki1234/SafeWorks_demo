@@ -34,14 +34,15 @@ export default function JobDetail() {
     const jobScore = calcJobScore(found)
     const userFit = calcUserFit(found, conditions)
     const workloadFit = calcWorkloadFit(found)
-    const scores = { workloadFit, jobScore, userFit }
+    const overall_score = calcCompatibility(found, conditions)
+    const scores = { workloadFit, jobScore, userFit, overall_score }
 
     setJob({
       ...found,
       jobScore,
       userFit,
       workloadFit,
-      compatibility: calcCompatibility(found, conditions),
+      compatibility: overall_score,
       difficulty: calcDifficulty(found),
       whoFitsThis: getWhoFitsThis(found),
       whyHardReasons: getWhyHardForUser(found, conditions),
@@ -217,6 +218,7 @@ export default function JobDetail() {
               workloadFit: job.workloadFit,
               jobScore: job.jobScore,
               userFit: job.userFit,
+              overall_score: job.compatibility,
             })
           }}
           style={{

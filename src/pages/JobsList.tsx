@@ -76,8 +76,11 @@ export default function JobsList() {
     const scored = buildJobsWithScore(jobs, conditions)
     setJobList(scored)
     logJobsListViewed({
-      shownJobIds: scored.map((j) => j.id),
-      rankingOrder: scored.map((j) => j.id),
+      ranked_jobs: scored.map((j, i) => ({
+        job_id: j.id,
+        position: i + 1,
+        overall_score: j.compatibility,
+      })),
     })
   }, [])
 

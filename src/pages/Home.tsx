@@ -33,9 +33,10 @@ export default function Home() {
     }
     saveConditions(conditions)
     logFiltersSubmitted({
-      minHourlyRate,
-      continuousPreference: wantsContinuous,
-      avoidConditions,
+      experience_level: experienceLevel,
+      min_hourly: minHourlyRate,
+      wants_continuity: wantsContinuous,
+      avoid_conditions: avoidConditions,
     })
     navigate('/jobs')
   }

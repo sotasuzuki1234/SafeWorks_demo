@@ -1,9 +1,9 @@
 import { supabase } from './supabase'
 
 const SESSION_KEY = 'safeworks_session_id'
+const TESTER_ID_KEY = 'safeworks_tester_id'
 const CLICK_CONTEXT_KEY = 'safeworks_click_context'
 
-// セッションIDを取得（なければ新規発行）
 function getOrCreateSessionId(): { id: string; isNew: boolean } {
   let sid = sessionStorage.getItem(SESSION_KEY)
   if (!sid) {
@@ -18,7 +18,17 @@ export function getSessionId(): string {
   return getOrCreateSessionId().id
 }
 
-// クリック時のコンテキスト（順位・スコア）をセッションストレージに保存
+// URLパラメータ ?tester_id=xxx を読み取り、sessionStorage に永続化
+export function getTesterid(): string | null {
+  const params = new URLSearchParams(window.location.search)
+  const fromUrl = params.get('tester_id')
+  if (fromUrl) {
+    sessionStorage.setItem(TESTER_ID_KEY, fromUrl)
+    return fromUrl
+  }
+  return sessionStorage.getItem(TESTER_ID_KEY)
+}
+
 export interface ClickContext {
   job_id: string
   rank: number
@@ -26,6 +36,12 @@ export interface ClickContext {
   workloadFit: number
   jobScore: number
   userFit: number
+}
+
+export interface RankedJob {
+  job_id: string
+  position: number
+  overall_score: number
 }
 
 export function saveClickContext(ctx: ClickContext): void {
@@ -50,7 +66,11 @@ function send(
   payload: Record<string, unknown>
 ): void {
   const session_id = getSessionId()
-  const fullPayload = jobId ? { session_id, job_id: jobId, ...payload } : { session_id, ...payload }
+  const tester_id = getTesterid()
+  const base: Record<string, unknown> = { session_id }
+  if (tester_id) base.tester_id = tester_id
+  if (jobId) base.job_id = jobId
+  const fullPayload = { ...base, ...payload }
   void supabase
     .from('event_logs')
     .insert({ event_type: eventType, payload: fullPayload })
@@ -69,28 +89,26 @@ export function logSessionStart(): void {
 }
 
 export function logFiltersSubmitted(payload: {
-  minHourlyRate: number
-  continuousPreference: boolean
-  avoidConditions: string[]
+  experience_level: string
+  min_hourly: number
+  wants_continuity: boolean
+  avoid_conditions: string[]
 }): void {
   send('filters_submitted', null, payload)
 }
 
-export function logJobsListViewed(payload: {
-  shownJobIds: string[]
-  rankingOrder: string[]
-}): void {
+export function logJobsListViewed(payload: { ranked_jobs: RankedJob[] }): void {
   send('jobs_list_viewed', null, payload)
 }
 
 export function logJobDetailViewed(
   jobId: string,
   ctx: ClickContext | null,
-  scores: { workloadFit: number; jobScore: number; userFit: number }
+  scores: { workloadFit: number; jobScore: number; userFit: number; overall_score: number }
 ): void {
   send('job_detail_viewed', jobId, {
-    rank_at_click: ctx?.rank ?? null,
-    score_at_click: ctx?.compatibility ?? null,
+    position: ctx?.rank ?? null,
+    overall_score: scores.overall_score,
     workloadFit: scores.workloadFit,
     jobScore: scores.jobScore,
     userFit: scores.userFit,
@@ -100,11 +118,11 @@ export function logJobDetailViewed(
 export function logApplyClicked(
   jobId: string,
   ctx: ClickContext | null,
-  scores: { workloadFit: number; jobScore: number; userFit: number }
+  scores: { workloadFit: number; jobScore: number; userFit: number; overall_score: number }
 ): void {
   send('apply_clicked', jobId, {
-    rank_at_click: ctx?.rank ?? null,
-    score_at_click: ctx?.compatibility ?? null,
+    position: ctx?.rank ?? null,
+    overall_score: scores.overall_score,
     workloadFit: scores.workloadFit,
     jobScore: scores.jobScore,
     userFit: scores.userFit,
