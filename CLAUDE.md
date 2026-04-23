@@ -50,7 +50,8 @@ grep '"externalUrl"' src/data/jobs-beta.json
   "fitReasonShort": "一言コメント",
   "goodPoints": [],
   "cautionPoints": [],
-  "externalUrl": "https://..."
+  "externalUrl": "https://...",
+  "deadline": "YYYY-MM-DD"
 }
 ```
 
@@ -62,6 +63,7 @@ grep '"externalUrl"' src/data/jobs-beta.json
 | `responseSpeed` | `"fast"` / `"normal"` / `"slow"` |
 | `isContinuous` | `true` / `false` |
 | `hourlyRate` | `reward ÷ estimatedHours` で計算 |
+| `deadline` | CrowdWorksの募集期限（`YYYY-MM-DD` 形式）。期限不明の場合は省略 |
 
 ---
 
@@ -72,37 +74,38 @@ grep '"externalUrl"' src/data/jobs-beta.json
 - `externalUrl` は実際の応募ページURL（必須）
 - `cautionTags` は `tags` の中から「避けたい条件」に該当するものを再掲
 - `fitReasonShort` は15〜30文字程度の一言で記載
+- `deadline` はCrowdWorksの案件ページに記載の募集期限を `YYYY-MM-DD` で設定する。期限が過ぎると一覧から自動的に除外される
 
 ---
 
 ## 現在の案件IDと URL 一覧
 
-| id | externalUrl |
-|---|---|
-| job-006 | https://crowdworks.jp/public/jobs/13050383 |
-| job-007 | https://crowdworks.jp/public/jobs/13050365 |
-| job-008 | https://crowdworks.jp/public/jobs/13049850 |
-| job-009 | https://crowdworks.jp/public/jobs/13029964 |
-| job-010 | https://crowdworks.jp/public/jobs/13050341 |
-| job-011 | https://crowdworks.jp/public/jobs/13051680 |
-| job-012 | https://crowdworks.jp/public/jobs/13050290 |
-| job-013 | https://crowdworks.jp/public/jobs/13050352 |
-| job-014 | https://crowdworks.jp/public/jobs/13051889 |
-| job-015 | https://crowdworks.jp/public/jobs/13049914 |
-| job-016 | https://crowdworks.jp/public/jobs/13051233 |
-| job-017 | https://crowdworks.jp/public/jobs/13056864 |
-| job-018 | https://crowdworks.jp/public/jobs/13056407 |
-| job-019 | https://crowdworks.jp/public/jobs/13059306 |
-| job-020 | https://crowdworks.jp/public/jobs/13035319 |
-| job-021 | https://crowdworks.jp/public/jobs/13054496 |
-| job-022 | https://crowdworks.jp/public/jobs/13059332 |
-| job-023 | https://crowdworks.jp/public/jobs/13051098 |
-| job-024 | https://crowdworks.jp/public/jobs/13031709 |
-| job-025 | https://crowdworks.jp/public/jobs/13058333 |
-| job-026 | https://crowdworks.jp/public/jobs/13056140 |
-| job-027 | https://crowdworks.jp/public/jobs/13028263 |
-| job-028 | https://crowdworks.jp/public/jobs/13059201 |
-| job-029 | https://crowdworks.jp/public/jobs/13033096 |
-| job-030 | https://crowdworks.jp/public/jobs/13040089 |
+| id | externalUrl | deadline |
+|---|---|---|
+| job-001 | https://crowdworks.jp/public/jobs/13080567 | 2026-05-07 |
+| job-002 | https://crowdworks.jp/public/jobs/13079849 | 2026-05-07 |
+| job-003 | https://crowdworks.jp/public/jobs/13079816 | 2026-05-07 |
+| job-004 | https://crowdworks.jp/public/jobs/13078554 | 2026-04-29 |
+| job-005 | https://crowdworks.jp/public/jobs/13077977 | 2026-05-02 |
+| job-006 | https://crowdworks.jp/public/jobs/12968333 | 2026-04-29 |
+| job-007 | https://crowdworks.jp/public/jobs/13012757 | 2026-04-30 |
+| job-008 | https://crowdworks.jp/public/jobs/13078868 | 2026-05-06 |
+| job-009 | https://crowdworks.jp/public/jobs/13078802 | 2026-05-06 |
+| job-010 | https://crowdworks.jp/public/jobs/13078768 | 2026-04-25 |
+| job-011 | https://crowdworks.jp/public/jobs/13075795 | 2026-05-05 |
+| job-012 | https://crowdworks.jp/public/jobs/13078497 | 2026-05-06 |
+| job-013 | https://crowdworks.jp/public/jobs/13040888 | 2026-05-06 |
+| job-014 | https://crowdworks.jp/public/jobs/13077468 | 2026-05-06 |
+| job-015 | https://crowdworks.jp/public/jobs/13076276 | 2026-05-05 |
+| job-016 | https://crowdworks.jp/public/jobs/13076067 | 2026-05-05 |
+| job-017 | https://crowdworks.jp/public/jobs/13074060 | 2026-05-05 |
+| job-018 | https://crowdworks.jp/public/jobs/13074964 | 2026-05-05 |
+| job-019 | https://crowdworks.jp/public/jobs/13074059 | 2026-05-05 |
+| job-020 | https://crowdworks.jp/public/jobs/13074880 | 2026-05-05 |
+| job-021 | https://crowdworks.jp/public/jobs/12784249 | 2026-05-03 |
+| job-022 | https://crowdworks.jp/public/jobs/13071006 | 2026-05-03 |
+| job-023 | https://crowdworks.jp/public/jobs/13073451 | 2026-05-04 |
+| job-024 | https://crowdworks.jp/public/jobs/13072094 | 2026-05-04 |
+| job-025 | https://crowdworks.jp/public/jobs/13073566 | 2026-05-04 |
 
 > 案件を追加したら、このテーブルも更新すること。

@@ -27,6 +27,7 @@ export interface Job {
   workStyleNote: string     // この案件の働き方
   futureNote: string        // この案件を続けた場合の未来
   externalUrl: string       // 応募元ページURL（必須）
+  deadline?: string         // 応募期限（YYYY-MM-DD、省略時は期限なし）
 }
 
 export interface JobWithScore extends Job {

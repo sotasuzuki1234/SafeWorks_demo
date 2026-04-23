@@ -6,7 +6,10 @@ import { buildJobsWithScore } from '../utils/compatibility'
 import jobsRaw from '../data/jobs-beta.json'
 import { logJobsListViewed, saveClickContext } from '../lib/logger'
 
-const jobs = jobsRaw as unknown as Job[]
+const today = new Date().toISOString().slice(0, 10)
+const jobs = (jobsRaw as unknown as Job[]).filter(
+  (j) => !j.deadline || j.deadline >= today
+)
 
 const replySpeedLabel: Record<string, string> = {
   fast: '返信速い',

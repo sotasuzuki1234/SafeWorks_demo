@@ -64,9 +64,28 @@ export default function JobDetail() {
   }
 
   const scoreColor = job.compatibility >= 70 ? '#2a7' : job.compatibility >= 40 ? '#f90' : '#c33'
+  const today = new Date().toISOString().slice(0, 10)
+  const isExpired = !!job.deadline && job.deadline < today
 
   return (
     <div style={{ maxWidth: 480, margin: '0 auto', padding: '24px 16px' }}>
+      {/* 期限切れバナー */}
+      {isExpired && (
+        <div
+          style={{
+            background: '#fff3f3',
+            border: '1px solid #f5c0c0',
+            borderRadius: 8,
+            padding: '10px 14px',
+            marginBottom: 16,
+            fontSize: 13,
+            color: '#c33',
+            fontWeight: 'bold',
+          }}
+        >
+          この案件は応募期限（{job.deadline}）が過ぎています
+        </div>
+      )}
       {/* ヘッダー */}
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20, gap: 12 }}>
         <button
