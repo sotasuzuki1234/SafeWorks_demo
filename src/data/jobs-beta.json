@@ -740,5 +740,455 @@
     "futureNote": "縦型SNS広告の編集実績が積めるが、単価向上には交渉が必要。",
     "externalUrl": "https://crowdworks.jp/public/jobs/13073566",
     "deadline": "2026-05-04"
+  },
+  {
+    "id": "job-026",
+    "title": "YouTubeショート動画の作成・アップロードまでのお仕事",
+    "clientName": "kapibiz",
+    "reward": 500,
+    "estimatedHours": 1,
+    "hourlyRate": 500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube Shorts", "テロップ挿入", "アップロード代行", "ポートフォリオ必須", "ChatWork", "フルリモート"],
+    "cautionTags": ["ポートフォリオ必須"],
+    "fitReasonShort": "YouTube投稿まで一括対応・実務経験者向けの継続ショート案件",
+    "goodPoints": [
+      "構成・テロップ・アップロードまで一括対応でスキルをフルに活用できる",
+      "継続発注を予定しており安定した収入が見込める",
+      "視聴維持率を意識した編集力を磨ける"
+    ],
+    "cautionPoints": [
+      "実務経験・ポートフォリオが必須で未経験者は応募困難",
+      "500円/本と単価が低め",
+      "テスト段階で既存動画の改善案提示が必要"
+    ],
+    "workStyleNote": "テロップ挿入・構成ブラッシュアップ・概要欄作成・YouTube投稿まで一括担当。ChatWork連絡必須。",
+    "futureNote": "アップロード代行まで含むフルセット案件は実績になるが単価向上が課題。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/12984794",
+    "deadline": "2026-05-10"
+  },
+  {
+    "id": "job-027",
+    "title": "【継続】動画編集者募集【長尺・ショート】",
+    "clientName": "makicl",
+    "reward": 1000,
+    "estimatedHours": 2,
+    "hourlyRate": 500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "ショート動画", "TikTok", "Instagram", "Premiere Pro", "長尺動画", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "長尺・ショート両対応でスキル幅が広がる継続案件",
+    "goodPoints": [
+      "長尺・ショート両方の編集実績が積める",
+      "実力次第でディレクターへのキャリアアップが可能",
+      "継続前提で安定した発注が期待できる"
+    ],
+    "cautionPoints": [
+      "時給換算500円と低め",
+      "テスト2〜3案件完了後に採用確定とやや時間がかかる",
+      "報酬は案件タイプにより500〜2,000円と幅がある"
+    ],
+    "workStyleNote": "カット・テロップ・SE・BGM処理が主業務。Premiere Pro 2025使用。",
+    "futureNote": "長尺・ショート両方の実績が積めるため汎用的なポートフォリオ構築に役立つ。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13022312",
+    "deadline": "2026-05-10"
+  },
+  {
+    "id": "job-028",
+    "title": "ショート動画編集者様募集！1本1500円！【継続】",
+    "clientName": "TAMV",
+    "reward": 1500,
+    "estimatedHours": 2,
+    "hourlyRate": 750,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "TikTok", "ショート動画", "テロップ挿入", "Premiere Pro", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "1日1本ずつ納品の月12本ペースで安定するTikTok編集",
+    "goodPoints": [
+      "月12本の安定した発注量がある",
+      "1本ずつ順序よく納品できる管理しやすいペース",
+      "クライアント評価4.9と信頼性が高い"
+    ],
+    "cautionPoints": [
+      "Premiere Pro必須（CapCutなど他ツールはNG）",
+      "時給換算750円とやや低め",
+      "自己紹介と実績提示が応募時に必要"
+    ],
+    "workStyleNote": "まとめて素材受取後、翌日から1日1本ずつ納品。カット・テロップ・SE編集。",
+    "futureNote": "月12本の安定ペースで副業収益を積み上げやすい。単価交渉で収益アップを狙える。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13085640",
+    "deadline": "2026-05-10"
+  },
+  {
+    "id": "job-029",
+    "title": "Instagram リール用ショート動画の編集をお願いします！【長期継続】",
+    "clientName": "中野.卓.",
+    "reward": 2000,
+    "estimatedHours": 2,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "Instagram", "リール", "ショート動画", "Premiere Pro", "ポートフォリオ必須", "継続", "フルリモート"],
+    "cautionTags": ["ポートフォリオ必須"],
+    "fitReasonShort": "月5〜10本の完コピ再現力が求められるInstagramリール編集",
+    "goodPoints": [
+      "月5〜10本の安定した発注量",
+      "2,000円/本と単価が適切",
+      "継続案件で長期パートナーとして活動できる"
+    ],
+    "cautionPoints": [
+      "ポートフォリオで高クオリティ作品複数本の提示が必須",
+      "参考動画をほぼ完コピできる能力が求められる",
+      "字幕だけの動画は選考外と審査が厳しい"
+    ],
+    "workStyleNote": "トーク系リール編集がメイン。強調部分に文字・画角拡大を施す。素材から3日以内納品。",
+    "futureNote": "Instagramリール編集の実績が積める。単価交渉で月収をさらに伸ばしやすい。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13041392",
+    "deadline": "2026-05-10"
+  },
+  {
+    "id": "job-030",
+    "title": "短尺動画の動画編集依頼【1本1000円/継続あり】",
+    "clientName": "ペン太",
+    "reward": 1000,
+    "estimatedHours": 1,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 60,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "ループ動画", "モザイク処理", "成人向けコンテンツ", "フルリモート"],
+    "cautionTags": ["成人向けコンテンツ"],
+    "fitReasonShort": "成人向けアニメ動画のループ編集・ジャンル確認が必須",
+    "goodPoints": [
+      "1,000円/本と時給換算が良好",
+      "短尺ループ動画のシンプルな作業",
+      "継続依頼あり"
+    ],
+    "cautionPoints": [
+      "大人向け二次元アニメ動画の取り扱いが必要",
+      "ジャンルに抵抗がある場合は応募不向き",
+      "著作権譲渡・情報漏洩禁止への同意が必須"
+    ],
+    "workStyleNote": "5秒動画3〜4本をループ・速度調整で1分MP4に編集。音声素材挿入・モザイク処理あり。",
+    "futureNote": "時給単価は良好だが成人向けコンテンツへの抵抗がない場合のみ検討。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13084145",
+    "deadline": "2026-05-09"
+  },
+  {
+    "id": "job-031",
+    "title": "ショート動画編集D（責任者）募集｜長期・単価UPあり",
+    "clientName": "縣浩太郎",
+    "reward": 2500,
+    "estimatedHours": 4,
+    "hourlyRate": 625,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "SNS運用", "ディレクション", "責任者", "Premiere Pro", "週20時間以上", "副業不向き", "フルリモート"],
+    "cautionTags": ["週20時間以上", "副業不向き"],
+    "fitReasonShort": "1日4時間以上稼働必須の責任者ポジション・副業には重い",
+    "goodPoints": [
+      "長期案件で実績に応じた単価UPの見込みがある",
+      "ショート・ロング両方の編集経験が積める",
+      "ディレクションの実務経験が身につく"
+    ],
+    "cautionPoints": [
+      "1日4時間以上の稼働が必須で本業との両立が困難",
+      "時給換算625円と低め",
+      "ディレクター責任者レベルのマインドが求められる"
+    ],
+    "workStyleNote": "ショート・ロング動画編集・投稿代行・数値入力・クライアント対応を一括担当。LINE必須。",
+    "futureNote": "副業ではなく独立・フリーランス移行を検討している場合のみ向いている案件。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13084218",
+    "deadline": "2026-05-09"
+  },
+  {
+    "id": "job-032",
+    "title": "月収20万円以上可能！ショート動画編集パートナー大募集",
+    "clientName": "白井ひろき",
+    "reward": 1000,
+    "estimatedHours": 1,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "Premiere Pro", "量産型", "Chatwork", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "段階的に本数を増やして月収を伸ばせる量産型ショート編集",
+    "goodPoints": [
+      "STEP制で月20〜100本と段階的に収益を拡大できる",
+      "月20本で20,000円、100本で120,000円と本数に比例した収益",
+      "マニュアル作成で追加オプション報酬も狙える"
+    ],
+    "cautionPoints": [
+      "時給換算1,000円と単価は低め",
+      "トライアルは100円と極めて低単価からスタート",
+      "月収を伸ばすには大量の本数をこなす必要がある"
+    ],
+    "workStyleNote": "カット・テロップ・BGM・SE・素材挿入などのショート編集。納期2日以内厳守。Chatwork必須。",
+    "futureNote": "量産型だが本数を積み上げれば月収20万円も現実的。副業の安定収入源として活用できる。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13069383",
+    "deadline": "2026-05-09"
+  },
+  {
+    "id": "job-033",
+    "title": "【金運系】Instagramリール・ショート動画作成｜継続発注あり",
+    "clientName": "Media B",
+    "reward": 300,
+    "estimatedHours": 1,
+    "hourlyRate": 300,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 60,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "Instagram", "リール", "スピリチュアル", "テロップ挿入", "AI素材", "低単価", "フルリモート"],
+    "cautionTags": ["低単価"],
+    "fitReasonShort": "300円/本は低単価・スピリチュアルジャンルへの適合が必要",
+    "goodPoints": [
+      "継続発注で安定した受注が見込める",
+      "クオリティ次第で単価アップの可能性がある",
+      "AI素材生成スキルが身につく"
+    ],
+    "cautionPoints": [
+      "300円/本と副業収益として成り立たない低単価",
+      "スピリチュアル（金運系）コンテンツへの理解が必要",
+      "ポートフォリオURL・週間対応本数など詳細な応募情報が必要"
+    ],
+    "workStyleNote": "40〜60秒テロップ主体のリール動画。参考動画の構成・テンポを再現しつつ内容はオリジナルにリライト。",
+    "futureNote": "副業収益目的では非推奨。スピリチュアルコンテンツに興味がある場合のポートフォリオ練習向き。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13084705",
+    "deadline": "2026-05-09"
+  },
+  {
+    "id": "job-034",
+    "title": "【インセンティブあり】プロンプトありで超簡単◎15秒のAI動画作成【継続依頼あり】",
+    "clientName": "sp_cw17",
+    "reward": 500,
+    "estimatedHours": 1,
+    "hourlyRate": 500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 1,
+    "tags": ["AI動画生成", "ショート動画", "テロップ挿入", "TikTok広告", "veo", "Chatwork", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "プロンプト提供のAI動画生成案件・再生数インセンティブあり",
+    "goodPoints": [
+      "プロンプトは提供済みでコピペ生成が可能なシンプル作業",
+      "5,000再生で+800円など再生数インセンティブがある",
+      "クライアント評価4.9と信頼性が高い"
+    ],
+    "cautionPoints": [
+      "500円/3動画（1セット）と単価が低め",
+      "月30セット以上（90動画以上）の対応が必要",
+      "AI動画生成ツール（veoなど）の使用経験が必要"
+    ],
+    "workStyleNote": "プロンプト・商品画像からAI動画を生成し修正・テロップ編集・検収まで対応。納期2日以内。",
+    "futureNote": "AI動画生成スキルが身につく新しい分野。インセンティブ込みで収益を伸ばせる可能性がある。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13083526",
+    "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-035",
+    "title": "YouTube動画編集｜カット編集＋テロップ入れ",
+    "clientName": "Create K",
+    "reward": 4000,
+    "estimatedHours": 4,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "カット編集", "テロップ挿入", "BGM", "Premiere Pro", "エンタメ", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "素材・指示書提供でカット・テロップ作業に集中できるYouTube編集",
+    "goodPoints": [
+      "素材と指示書はクライアント提供で編集作業に集中できる",
+      "4,000〜30,000円と実績に応じた単価幅がある",
+      "エンタメ系YouTubeの長尺編集実績が積める"
+    ],
+    "cautionPoints": [
+      "時給換算1,000円とやや低め",
+      "トライアルは100円と極めて低い",
+      "Premiere Proの実務経験が求められる"
+    ],
+    "workStyleNote": "エンタメ系3〜15分動画のカット・テロップ・BGM/効果音挿入。3〜5日以内納品。",
+    "futureNote": "YouTube長尺動画の編集スキルを積みながら、実績次第で高単価帯を目指せる。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13082088",
+    "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-036",
+    "title": "SNS広告用ショート動画の編集パートナーを募集！台本＆素材あり",
+    "clientName": "creator0731",
+    "reward": 1500,
+    "estimatedHours": 2,
+    "hourlyRate": 750,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "SNS広告", "ショート動画", "テロップ挿入", "BGM", "縦型動画", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "台本・素材提供でSNS広告動画の編集に集中できる継続案件",
+    "goodPoints": [
+      "台本・素材はクライアント提供で撮影不要",
+      "月5〜15本の安定した発注量",
+      "ツール指定なしで自分の得意なソフトで対応できる"
+    ],
+    "cautionPoints": [
+      "時給換算750円とやや低め",
+      "トライアルは500円と低め",
+      "ポートフォリオまたは実績URLの提出が必要"
+    ],
+    "workStyleNote": "30〜60秒縦型ショート動画のカット・テロップ・BGM/SE・エフェクト・テンポ調整。",
+    "futureNote": "SNS広告動画の編集実績が積める。継続で安定収入を確保しながら単価交渉を目指せる。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13083782",
+    "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-037",
+    "title": "YouTubeの動画編集のご依頼",
+    "clientName": "takahiro25",
+    "reward": 7000,
+    "estimatedHours": 5,
+    "hourlyRate": 1400,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "Premiere Pro", "長尺動画", "ポートフォリオ必須", "著作権譲渡", "継続", "フルリモート"],
+    "cautionTags": ["ポートフォリオ必須", "著作権譲渡"],
+    "fitReasonShort": "時給1,400円の実写YouTube長尺案件・著作権譲渡形式",
+    "goodPoints": [
+      "7,000〜10,000円/本と高単価帯",
+      "複数チャンネル案件対応でポートフォリオが充実する",
+      "継続で長期的なパートナーとして活動できる"
+    ],
+    "cautionPoints": [
+      "ポートフォリオ提出必須でAdobe Premiere Pro経験が必要",
+      "納品時に著作権をクライアントに譲渡する形式",
+      "報告・連絡・相談の徹底と秘密保持が求められる"
+    ],
+    "workStyleNote": "実写YouTube動画の編集。複数の法人・YouTuber案件を展開予定。週ごとの納品本数は応募時に確認。",
+    "futureNote": "高単価帯のYouTube編集案件として収益性が高い。著作権譲渡条件の確認は必須。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13083719",
+    "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-038",
+    "title": "【未経験OK】在宅でできるショート動画編集スタッフ募集 継続あり/Premiere Pro使用",
+    "clientName": "BeRde",
+    "reward": 2000,
+    "estimatedHours": 2,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "Premiere Pro", "テロップ挿入", "BGM", "未経験可", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "未経験OKのPremiere Pro必須ショート編集・テスト500円",
+    "goodPoints": [
+      "未経験OKで動画編集の入門に最適",
+      "カット・テロップ・BGM・テンポ調整と基本スキルが全て身につく",
+      "継続案件で継続的な収入が得られる"
+    ],
+    "cautionPoints": [
+      "Premiere Pro使用可能なPC環境が必須",
+      "テスト案件は500円と低め",
+      "継続案件は2,000〜5,000円と幅があり不確定"
+    ],
+    "workStyleNote": "素材動画のカット・テロップ挿入・効果音/BGM追加・全体テンポ調整。Premiere Pro使用。",
+    "futureNote": "未経験者のポートフォリオ作りに使える入門案件。実績を積んで高単価案件に移行が理想。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13083013",
+    "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-039",
+    "title": "SNS向けショート動画編集者募集（3名限定）",
+    "clientName": "ayabe_1003",
+    "reward": 8000,
+    "estimatedHours": 4,
+    "hourlyRate": 2000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 75,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "SNS", "ショート動画", "Premiere Pro", "After Effects", "ポートフォリオ必須", "3名限定", "継続", "フルリモート"],
+    "cautionTags": ["ポートフォリオ必須"],
+    "fitReasonShort": "時給2,000円・3名限定のSNSショート動画高単価案件",
+    "goodPoints": [
+      "8,000〜15,000円/本と副業単価として高水準",
+      "時給換算2,000円と効率が良い",
+      "マニュアル完備で作業基準が明確"
+    ],
+    "cautionPoints": [
+      "Adobe Premiere Pro経験必須・After Effects歓迎",
+      "ポートフォリオとSNS/YouTube/広告動画編集経験が必要",
+      "修正2回まで対応が条件"
+    ],
+    "workStyleNote": "カット・テロップ・BGM/SE・ズーム/画像挿入・テキストアニメーション・音量調整。最大週3本・納期1〜3日。",
+    "futureNote": "3名限定の高単価案件で競争率が高め。実績があれば最短で高収益を得られる。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13082599",
+    "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-040",
+    "title": "【未経験OK｜在宅ワーク】動画編集スタッフ募集（マニュアル完備）",
+    "clientName": "ikeda__._ ",
+    "reward": 1000,
+    "estimatedHours": 2,
+    "hourlyRate": 500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "テロップ挿入", "BGM", "サムネイル制作", "未経験可", "継続", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "マニュアル完備で未経験から始められる在宅動画編集案件",
+    "goodPoints": [
+      "マニュアル完備で未経験者でも取り組みやすい",
+      "カット・テロップ・BGM・サムネと動画編集の基礎が全て学べる",
+      "継続案件でスキルを積みながら単価交渉できる"
+    ],
+    "cautionPoints": [
+      "時給換算500円と低め",
+      "報酬は1,000〜3,000円と幅があり不確定",
+      "使用ツールが明記されておらず応募時に確認が必要"
+    ],
+    "workStyleNote": "カット編集・テロップ挿入・BGM/効果音追加・サムネイル作成・色味調整。まずは簡単な作業からスタート可。",
+    "futureNote": "実績とポートフォリオを積む入口として活用できるが、収益化は高単価案件との並行が理想。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13083431",
+    "deadline": "2026-05-08"
   }
 ]

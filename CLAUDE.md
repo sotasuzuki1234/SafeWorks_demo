@@ -107,5 +107,20 @@ grep '"externalUrl"' src/data/jobs-beta.json
 | job-023 | https://crowdworks.jp/public/jobs/13073451 | 2026-05-04 |
 | job-024 | https://crowdworks.jp/public/jobs/13072094 | 2026-05-04 |
 | job-025 | https://crowdworks.jp/public/jobs/13073566 | 2026-05-04 |
+| job-026 | https://crowdworks.jp/public/jobs/12984794 | 2026-05-10 |
+| job-027 | https://crowdworks.jp/public/jobs/13022312 | 2026-05-10 |
+| job-028 | https://crowdworks.jp/public/jobs/13085640 | 2026-05-10 |
+| job-029 | https://crowdworks.jp/public/jobs/13041392 | 2026-05-10 |
+| job-030 | https://crowdworks.jp/public/jobs/13084145 | 2026-05-09 |
+| job-031 | https://crowdworks.jp/public/jobs/13084218 | 2026-05-09 |
+| job-032 | https://crowdworks.jp/public/jobs/13069383 | 2026-05-09 |
+| job-033 | https://crowdworks.jp/public/jobs/13084705 | 2026-05-09 |
+| job-034 | https://crowdworks.jp/public/jobs/13083526 | 2026-05-08 |
+| job-035 | https://crowdworks.jp/public/jobs/13082088 | 2026-05-08 |
+| job-036 | https://crowdworks.jp/public/jobs/13083782 | 2026-05-08 |
+| job-037 | https://crowdworks.jp/public/jobs/13083719 | 2026-05-08 |
+| job-038 | https://crowdworks.jp/public/jobs/13083013 | 2026-05-08 |
+| job-039 | https://crowdworks.jp/public/jobs/13082599 | 2026-05-08 |
+| job-040 | https://crowdworks.jp/public/jobs/13083431 | 2026-05-08 |
 
 > 案件を追加したら、このテーブルも更新すること。
