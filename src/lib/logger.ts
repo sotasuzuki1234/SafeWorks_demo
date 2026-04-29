@@ -3,6 +3,7 @@ import { supabase } from './supabase'
 const SESSION_KEY = 'safeworks_session_id'
 const TESTER_ID_KEY = 'safeworks_tester_id'
 const CLICK_CONTEXT_KEY = 'safeworks_click_context'
+const FALLBACK_TESTER_ID = 'unknown_user'
 
 function getOrCreateSessionId(): { id: string; isNew: boolean } {
   let sid = sessionStorage.getItem(SESSION_KEY)
@@ -18,15 +19,19 @@ export function getSessionId(): string {
   return getOrCreateSessionId().id
 }
 
-// URLパラメータ ?tester_id=xxx を読み取り、sessionStorage に永続化
-export function getTesterid(): string | null {
+// URLパラメータ ?tester_id=xxx を読み取り、localStorage に永続化。
+// 未指定の場合は既存の保存値を使い、それもなければ 'unknown_user' を付与する。
+export function getTesterid(): string {
   const params = new URLSearchParams(window.location.search)
   const fromUrl = params.get('tester_id')
   if (fromUrl) {
-    sessionStorage.setItem(TESTER_ID_KEY, fromUrl)
+    localStorage.setItem(TESTER_ID_KEY, fromUrl)
     return fromUrl
   }
-  return sessionStorage.getItem(TESTER_ID_KEY)
+  const stored = localStorage.getItem(TESTER_ID_KEY)
+  if (stored) return stored
+  localStorage.setItem(TESTER_ID_KEY, FALLBACK_TESTER_ID)
+  return FALLBACK_TESTER_ID
 }
 
 export interface ClickContext {
@@ -67,8 +72,7 @@ function send(
 ): void {
   const session_id = getSessionId()
   const tester_id = getTesterid()
-  const base: Record<string, unknown> = { session_id }
-  if (tester_id) base.tester_id = tester_id
+  const base: Record<string, unknown> = { session_id, tester_id }
   if (jobId) base.job_id = jobId
   const fullPayload = { ...base, ...payload }
   void supabase

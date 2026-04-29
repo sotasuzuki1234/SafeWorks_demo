@@ -11,10 +11,49 @@ const jobs = (jobsRaw as unknown as Job[]).filter(
   (j) => !j.deadline || j.deadline >= today
 )
 
+// ③ 最終更新情報
+const NEW_JOBS_THRESHOLD = 40 // job-041 以降を「新着」とする
+function jobNumber(id: string): number {
+  return parseInt(id.replace('job-', ''), 10)
+}
+const lastUpdated = (() => {
+  const d = new Date()
+  return `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`
+})()
+const newJobsCount = jobs.filter((j) => jobNumber(j.id) > NEW_JOBS_THRESHOLD).length
+
 const replySpeedLabel: Record<string, string> = {
   fast: '返信速い',
   normal: '返信普通',
   slow: '返信遅め',
+}
+
+// ② おすすめ理由を userFit / jobScore / workloadFit / 継続性 / 単価 から生成
+function getRecommendReason(job: JobWithScore): string {
+  const { workloadFit, jobScore, userFit, isContinuous, hourlyRate } = job
+  if (workloadFit < 40) return '稼働量が多く副業との両立には注意が必要な案件'
+  if (userFit < 40) return '実績・スキルのハードルが高め。中〜上級者向け'
+  if (workloadFit >= 70 && jobScore >= 70 && isContinuous)
+    return '副業として無理なく継続でき、安定収入が見込める'
+  if (workloadFit >= 70 && jobScore >= 70)
+    return '副業として取り組みやすく、案件の質も高い'
+  if (workloadFit >= 70 && isContinuous)
+    return '無理なく継続しやすい副業向きの案件'
+  if (jobScore >= 70 && hourlyRate >= 2000)
+    return '高単価だが稼働管理が鍵。スキルがあれば高収益'
+  if (userFit < 55 && jobScore >= 60)
+    return '案件の質は高いが実績要件あり。スキル確認を推奨'
+  if (isContinuous && jobScore >= 50)
+    return '継続発注が見込め、コツコツ稼ぎたい人に向いている'
+  if (hourlyRate < 500)
+    return '単価は低め。実績づくりや練習として活用するのがおすすめ'
+  return '条件次第で取り組みやすい標準的な案件'
+}
+
+function RecommendBadgeColor(job: JobWithScore): string {
+  if (job.workloadFit < 40 || job.userFit < 40) return '#c33'
+  if (job.compatibility >= 70) return '#1a7'
+  return '#f90'
 }
 
 function ScoreBadge({ score }: { score: number }) {
@@ -103,7 +142,7 @@ export default function JobsList() {
 
   return (
     <div style={{ maxWidth: 480, margin: '0 auto', padding: '24px 16px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 24, gap: 12 }}>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16, gap: 12 }}>
         <button
           onClick={() => navigate('/')}
           style={{ border: 'none', background: 'none', cursor: 'pointer', fontSize: 20 }}
@@ -111,6 +150,37 @@ export default function JobsList() {
           ←
         </button>
         <h1 style={{ fontSize: 20, margin: 0 }}>案件一覧</h1>
+      </div>
+
+      {/* ③ 最終更新情報バナー */}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          background: '#f0f7ff',
+          border: '1px solid #cce0ff',
+          borderRadius: 8,
+          padding: '8px 14px',
+          marginBottom: 20,
+          fontSize: 13,
+        }}
+      >
+        <span style={{ color: '#555' }}>最終更新：{lastUpdated}</span>
+        {newJobsCount > 0 && (
+          <span
+            style={{
+              background: '#1a7',
+              color: '#fff',
+              borderRadius: 20,
+              padding: '2px 10px',
+              fontSize: 12,
+              fontWeight: 'bold',
+            }}
+          >
+            新着 {newJobsCount}件
+          </span>
+        )}
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -145,9 +215,19 @@ export default function JobsList() {
               <ScoreBadge score={job.compatibility} />
             </div>
 
-            {/* 適合率の一言理由 */}
-            <div style={{ fontSize: 12, color: '#555', marginBottom: 8, fontStyle: 'italic' }}>
-              {job.fitReasonShort}
+            {/* ② おすすめ理由（スコアベースで生成） */}
+            <div
+              style={{
+                fontSize: 12,
+                color: RecommendBadgeColor(job),
+                marginBottom: 8,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 4,
+              }}
+            >
+              <span>★</span>
+              <span>{getRecommendReason(job)}</span>
             </div>
 
             {/* スコア内訳バー */}

@@ -1190,5 +1190,455 @@
     "futureNote": "実績とポートフォリオを積む入口として活用できるが、収益化は高単価案件との並行が理想。",
     "externalUrl": "https://crowdworks.jp/public/jobs/13083431",
     "deadline": "2026-05-08"
+  },
+  {
+    "id": "job-041",
+    "title": "【高単価・継続】YouTube動画編集者募集！シネマティック・モチベーション系動画（1本5,000円〜10,000円）",
+    "clientName": "dina09",
+    "reward": 7500,
+    "estimatedHours": 4,
+    "hourlyRate": 1875,
+    "isContinuous": true,
+    "difficulty": "advanced",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "シネマティック", "モチベーション系", "カラーグレーディング", "Premiere Pro", "After Effects", "高単価", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "カラグレ要求・高単価シネマティック系YouTube編集",
+    "goodPoints": [
+      "1本5,000〜10,000円と高単価、スキル・実績により昇給・ボーナスあり",
+      "週1〜3本ペースで継続依頼が見込める",
+      "シネマティック演出の経験を積める質の高い案件"
+    ],
+    "cautionPoints": [
+      "本人確認未提出・発注ルール未回答のクライアントで信頼性に注意",
+      "プロ級のカラーグレーディングと緩急ある演出スキルが必要",
+      "After Effects等を含むプロ用ソフトの習熟が求められる"
+    ],
+    "workStyleNote": "カット・構成、テロップ挿入、BGM・効果音選定、カラーグレーディング。週1〜3本、相談可。",
+    "futureNote": "高単価帯のシネマティック系YouTube案件。実力次第で昇給が見込めるが、クライアント実績の確認を推奨。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13091876",
+    "deadline": "2026-05-13"
+  },
+  {
+    "id": "job-042",
+    "title": "Instagramリール動画の編集【1本1,000円〜2,000円×月1本〜30本】",
+    "clientName": "松野（採用）",
+    "reward": 2000,
+    "estimatedHours": 3,
+    "hourlyRate": 667,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "Instagram", "リール動画", "ショート動画", "テロップ挿入", "BGM", "完全自由稼働", "納期のみ管理", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "月1〜30本調整可能なInstagramリール継続編集",
+    "goodPoints": [
+      "月1〜30本と受注量を自分でコントロールできる",
+      "カット・テロップ・BGMとシンプルな作業内容",
+      "長期継続案件で安定した発注が見込める"
+    ],
+    "cautionPoints": [
+      "依頼から2日以内の着手報告・5日以内の初稿提出が必須",
+      "レスポンスが遅い場合は次回見送りと明記",
+      "テスト2本500円と低報酬のテスト課題あり"
+    ],
+    "workStyleNote": "カット・テロップ・画像・BGM/SE挿入。依頼から2日以内着手、5日以内初稿提出。",
+    "futureNote": "月の本数を自由に調整できる副業向きInstagramリール案件。本数を積んで収益アップを狙える。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13091354",
+    "deadline": "2026-05-13"
+  },
+  {
+    "id": "job-043",
+    "title": "動画制作　1本2万円～　継続依頼",
+    "clientName": "Mochi04",
+    "reward": 20000,
+    "estimatedHours": 5,
+    "hourlyRate": 4000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "映像編集", "企業案件", "医療", "美容", "高単価", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "YouTube長尺編集1本2万円〜の高単価継続案件",
+    "goodPoints": [
+      "1本2万円〜と高単価で収入が見込める",
+      "YouTube・広告・医療など多様な案件対応でスキル幅が広がる",
+      "継続依頼前提で安定した仕事が期待できる"
+    ],
+    "cautionPoints": [
+      "応募前に20秒テスト動画を無料で編集する必要あり",
+      "20〜30分の長尺動画編集が必要でスキルと時間が求められる",
+      "クライアント詳細情報が少なく信頼性を個別に確認が必要"
+    ],
+    "workStyleNote": "20〜30分尺のYouTube・広告・医療系映像編集。テスト動画（20秒）提出後に本採用。",
+    "futureNote": "高単価の長尺動画案件。テスト無料対応の条件があるため、信頼性確認後の応募を推奨。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13091285",
+    "deadline": "2026-05-13"
+  },
+  {
+    "id": "job-044",
+    "title": "【継続】縦型ショート動画編集者募集【CapCut・PremiereProなど】",
+    "clientName": "makicl",
+    "reward": 500,
+    "estimatedHours": 1.5,
+    "hourlyRate": 333,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 80,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "縦型動画", "CapCut", "Premiere Pro", "継続案件", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "CapCutやPremiereで完結する30秒縦型ショート継続案件",
+    "goodPoints": [
+      "経験が浅くても素直さと意欲があれば応募可能",
+      "CapCut・Premiere Pro両対応で使用ソフトを選べる",
+      "継続案件で安定した発注が期待できる"
+    ],
+    "cautionPoints": [
+      "単価500円と低め、収益化には本数を積む必要がある",
+      "既に10名と契約済みで競争率が高い状況",
+      "着手から1〜2日の短い納期が要求される"
+    ],
+    "workStyleNote": "30秒前後の縦型ショート動画編集。CapCut Pro・Premiere Pro使用。着手から1〜2日納品。",
+    "futureNote": "評価4.9の実績あるクライアントの入門向け案件。本数を積んで高単価案件への移行が理想。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13089040",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-045",
+    "title": "【高単価1万円へ昇給あり】動画テロップのリライトおよびリサーチ業務（Adobe Premiere Pro・Photoshop）",
+    "clientName": "株式会社レア・グルーヴ",
+    "reward": 7000,
+    "estimatedHours": 4,
+    "hourlyRate": 1750,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 80,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "テロップ", "リライト", "リサーチ", "Premiere Pro", "Photoshop", "長期継続", "高単価", "企業案件"],
+    "cautionTags": [],
+    "fitReasonShort": "テロップリライト+編集で最大1万円昇給あり企業案件",
+    "goodPoints": [
+      "テスト後本契約7,000円、精度次第でボーナス・最大1万円昇給あり",
+      "100本以上の大型プロジェクトで長期安定した仕事量が確保されている",
+      "テロップリライト・リサーチとライティングスキルも活かせる"
+    ],
+    "cautionPoints": [
+      "Premiere Pro操作に加えてリライト・リサーチスキルも必要",
+      "平日のみ対応で土日は翌営業日確認と制約あり",
+      "テスト編集1,000円と低め、本契約後から本格的な収益になる"
+    ],
+    "workStyleNote": "話し言葉テロップのリライト・専門用語説明文作成・公的サイトリサーチ・Premiere Proクリップ分け。平日対応。",
+    "futureNote": "ライティングと編集を組み合わせた複合スキル案件。長期安定と昇給制度があり中級者に適している。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13089917",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-046",
+    "title": "グルメ系ショート動画編集者募集！美味しそうに見せる編集が得意な方",
+    "clientName": "momonga00",
+    "reward": 2000,
+    "estimatedHours": 2,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "グルメ", "ショート動画", "Instagram", "TikTok", "縦型動画", "飲食店", "継続案件", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "飲食店素材からInstagram・TikTok縦型を月30〜50本継続編集",
+    "goodPoints": [
+      "月30〜50本の大量継続発注で安定した収入が見込める",
+      "グルメ系動画編集経験がアピールポイントになる",
+      "評価4.8の実績あるクライアントで信頼性が高い"
+    ],
+    "cautionPoints": [
+      "本番単価は応募者提案制のため交渉力が必要",
+      "納期1〜2日の高速納品が求められる",
+      "料理が美味しそうに見えるカット選定など視覚的センスが重視される"
+    ],
+    "workStyleNote": "飲食店撮影素材（30分〜1時間）からショート動画編集。カット選定・テロップ・BGM・効果音。納期1〜2日。",
+    "futureNote": "グルメ系動画編集の専門性を積める継続案件。単価は交渉次第で大きく変わる。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13089404",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-047",
+    "title": "【Vrew動画編集】恋愛解説系YouTube【長期依頼・継続前提】",
+    "clientName": "フォーチュンキャット",
+    "reward": 3000,
+    "estimatedHours": 2,
+    "hourlyRate": 1500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "Vrew", "恋愛解説", "テロップ", "継続案件", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "VrewでOKの恋愛解説YouTube・3〜6ヶ月継続前提",
+    "goodPoints": [
+      "Vrewのみで完結する難しい編集不要のシンプルな作業",
+      "本採用後3,000円/本と適正単価で長期3〜6ヶ月の継続案件",
+      "週2〜3本ペースで副業に取り組みやすいスケジュール"
+    ],
+    "cautionPoints": [
+      "2日以内の納品が必須で連絡が途切れないことが条件",
+      "テスト動画500円→本採用前2,500円と本採用まで時間がかかる",
+      "採用人数5名と複数採用で競争率が高い"
+    ],
+    "workStyleNote": "音声取り込み・Vrewインポート・テロップ挿入・簡単なアニメーション挿入。週2〜3本ペース。",
+    "futureNote": "Vrew未経験でも比較的習得しやすい入門向け継続案件。評価4.6の実績あるクライアント。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13090516",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-048",
+    "title": "【急募！長期可能／1件4000円〜／月60万も可能】週50時間以上稼働可能な広告ショート動画編集できる方を募集",
+    "clientName": "ぱんちゃん_しごとにん",
+    "reward": 4000,
+    "estimatedHours": 5,
+    "hourlyRate": 800,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 80,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "ショート動画", "広告動画", "TikTok", "Instagram", "Facebook", "CapCut", "長期継続", "週50時間以上"],
+    "cautionTags": ["週50時間以上"],
+    "fitReasonShort": "広告ショート動画6本セット4,000円・週50時間フル稼働案件",
+    "goodPoints": [
+      "週50時間以上稼働で月40〜60万円の高収入が見込める",
+      "評価4.9・1,548件レビューの信頼性の高いクライアント",
+      "CapCut使用可で特別な編集ソフト不要"
+    ],
+    "cautionPoints": [
+      "週50時間以上の稼働が必須でフルタイム並みの時間コミットが必要",
+      "翌日納品の高速納期が求められる",
+      "応募時に実績動画の提出が必須"
+    ],
+    "workStyleNote": "1ボディ+6冒頭の計6本セットを翌日納品。エフェクト・BGM追加。修正2回まで含む。",
+    "futureNote": "副業というより専業レベルの稼働量が必要。時間を確保できるなら高収入が見込める案件。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13089516",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-049",
+    "title": "面談なし！【長期・安定案件】SNS動画編集スタッフ募集｜フルリモート可／月額20〜30万円（業務委託）",
+    "clientName": "株式会社デジタルスタジオ",
+    "reward": 200000,
+    "estimatedHours": 160,
+    "hourlyRate": 1250,
+    "isContinuous": true,
+    "difficulty": "advanced",
+    "responseSpeed": "normal",
+    "continuationRate": 85,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "SNS動画", "Premiere Pro", "After Effects", "Photoshop", "サムネイル制作", "月額固定", "長期安定", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "Premiere Pro 3年以上向け月額20〜30万円の長期安定案件",
+    "goodPoints": [
+      "月額20〜30万円の固定報酬で収入が安定する",
+      "面談なしで即応募できる手軽さ",
+      "YouTube・SNS・サムネイルと幅広いスキルを活かせる"
+    ],
+    "cautionPoints": [
+      "Premiere Pro 3年以上の経験と長尺動画編集経験が求められる",
+      "月10名募集と競争率が高い案件",
+      "稼働日数・作業量は要相談で条件が不明確な部分がある"
+    ],
+    "workStyleNote": "YouTube・SNS向け動画編集（カット・テロップ・効果音・BGM・色調補正）＋サムネイル制作。月額固定。",
+    "futureNote": "長期安定収入を求める上級者向け。Premiere Pro 3年以上の実力がある場合に競争優位を持てる。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/12827811",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-050",
+    "title": "エンタメのショート反応集チャンネル動画編集募集【継続依頼・副業・大学生歓迎】",
+    "clientName": "free3150",
+    "reward": 500,
+    "estimatedHours": 1,
+    "hourlyRate": 500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "ショート動画", "反応集", "エンタメ", "初心者歓迎", "副業", "大学生歓迎", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "記事選定から動画完成まで初心者向け反応集編集500円/本",
+    "goodPoints": [
+      "難しい作業なしで初心者でも取り組みやすい",
+      "月何本でも対応可能で本数増加による単価アップあり",
+      "BGMと背景動画はクライアント提供で素材調達不要"
+    ],
+    "cautionPoints": [
+      "1本500円と低単価で収益化には本数を積む必要がある",
+      "動画尺が55秒以上59秒以内と厳密な制約あり",
+      "WEBサイトからの記事選定作業が別途必要"
+    ],
+    "workStyleNote": "WEBサイトから記事選定→台本読み込み・画像挿入→動画完成。BGM・背景動画はクライアント提供。",
+    "futureNote": "初心者のポートフォリオ作りに活用できる入門案件。本数を積めば単価アップの交渉余地あり。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/12807453",
+    "deadline": "2026-05-12"
+  },
+  {
+    "id": "job-051",
+    "title": "【継続】ショート動画編集者募集【初心者・スマホ編集OK】",
+    "clientName": "makicl",
+    "reward": 500,
+    "estimatedHours": 1.5,
+    "hourlyRate": 333,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 80,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "縦型動画", "Premiere Pro", "CapCut", "スマホ編集", "初心者歓迎", "継続案件", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "スマホ編集OKの初心者向けショート動画継続500円/本",
+    "goodPoints": [
+      "スマホ編集でもOKで特別な機材・ソフト不要",
+      "初心者推奨で実力を積みながら成長できる環境",
+      "月10本以上の継続発注で安定した収入が見込める"
+    ],
+    "cautionPoints": [
+      "1本500円と低単価でまとまった収益には本数が必要",
+      "2〜3日に1本以上の提出ペースが求められる",
+      "応募者7人中6人と既に多くの枠が埋まっている"
+    ],
+    "workStyleNote": "縦型ショート動画のカット・テロップ・エフェクト・SE。月10本以上。2〜3日に1本ペースで提出。",
+    "futureNote": "スマホ編集OKの入門向け案件。実績を積んで高単価案件へのステップアップに使える。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13087731",
+    "deadline": "2026-05-11"
+  },
+  {
+    "id": "job-052",
+    "title": "【継続依頼可能】ワンちゃんのSNSショート動画編集者募集！",
+    "clientName": "kkaku_ca9c",
+    "reward": 2000,
+    "estimatedHours": 2,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 94,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "TikTok", "Instagram", "YouTube Shorts", "ショート動画", "縦型動画", "ペット", "Premiere Pro", "CapCut", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "継続率94%ペットブランドの犬SNSショート動画2,000円〜",
+    "goodPoints": [
+      "継続率94%以上と高く安定した仕事量が見込める",
+      "初期2,000円/本から最大5,000円まで昇給制度あり",
+      "企画構成はクライアント提供で編集作業に集中できる"
+    ],
+    "cautionPoints": [
+      "初稿48時間・リテイク24時間の厳しい納期管理が必要",
+      "NDA（秘密保持契約）への対応が必須",
+      "PC作業限定でCapCutのPC版のみ使用可"
+    ],
+    "workStyleNote": "TikTok・Instagram Reels・YouTube Shorts向け30〜120秒編集。初稿48時間以内、リテイク24時間以内。",
+    "futureNote": "継続率94%の高実績ペットブランド案件。納期管理をしっかりできれば安定収入と昇給が見込める。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13088235",
+    "deadline": "2026-05-11"
+  },
+  {
+    "id": "job-053",
+    "title": "【継続・大量発注あり】動画編集チームのパートナー募集！未経験OKの簡易作業〜高単価案件まで幅広くご用意（ディレクター昇格あり）",
+    "clientName": "Noa_2525",
+    "reward": 2500,
+    "estimatedHours": 2,
+    "hourlyRate": 1250,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "fast",
+    "continuationRate": 80,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "ショート動画", "Premiere Pro", "Vrew", "生成AI", "初心者歓迎", "継続案件", "ディレクター昇格", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "未経験から始められてディレクター昇格もある動画編集チーム",
+    "goodPoints": [
+      "未経験OKのシンプル作業から高単価案件まで段階的に成長できる",
+      "ディレクター昇格の機会がありキャリアアップが見込める",
+      "評価4.9の信頼できるクライアントで安定した大量発注あり"
+    ],
+    "cautionPoints": [
+      "6時間以内の連絡対応と24時間以内の納品が目安として求められる",
+      "Chatwork・SlackなどコミュニケーションツールのPC対応が必須",
+      "複数プランの単価差が大きく安定収入には上位プランへの昇格が必要"
+    ],
+    "workStyleNote": "簡易作業（700〜1,000円）→通常編集（2,000〜3,500円）→高単価（5,000円〜）の3プラン構成。6時間以内返信。",
+    "futureNote": "チーム型案件で段階的に単価アップできる仕組みが整っている。ディレクター昇格を目指す人にも適している。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13086563",
+    "deadline": "2026-05-11"
+  },
+  {
+    "id": "job-054",
+    "title": "【継続あり】リール動画の作成/地方のカフェをPRする投稿の作成依頼！",
+    "clientName": "Nt32",
+    "reward": 500,
+    "estimatedHours": 2,
+    "hourlyRate": 250,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "Instagram", "リール動画", "Canva", "カフェ", "PR動画", "初心者歓迎", "継続案件", "フルリモート"],
+    "cautionTags": [],
+    "fitReasonShort": "Canvaで地方カフェPRリール制作・試験後継続あり",
+    "goodPoints": [
+      "Canvaで完結するため特別な編集ソフト不要",
+      "未経験歓迎でリール動画制作の入門に最適",
+      "試験発注後の継続案件で安定した仕事につながる可能性あり"
+    ],
+    "cautionPoints": [
+      "1投稿500円と低単価でまとまった収益には継続が必要",
+      "オンライン面談が必須で事前の時間調整が必要",
+      "募集2名のみと枠が非常に少ない"
+    ],
+    "workStyleNote": "クライアント提供素材をCanvaで編集。納期は発注から1週間程度。修正対応含む。オンライン面談必須。",
+    "futureNote": "Canvaのみで始められる最も敷居の低い入門案件。評価4.8の実績あるクライアント。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/13089512",
+    "deadline": "2026-05-11"
+  },
+  {
+    "id": "job-055",
+    "title": "【継続案件】美容クリニックのショート動画編集者募集！",
+    "clientName": "株式会社TRC",
+    "reward": 300,
+    "estimatedHours": 1,
+    "hourlyRate": 300,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "ショート動画", "Instagram", "TikTok", "YouTube", "美容", "医療", "テロップ挿入", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "美容クリニックのショート動画編集・テスト後継続300円/本",
+    "goodPoints": [
+      "美容・医療分野の動画編集経験を積める専門性の高い案件",
+      "Instagram・TikTok・YouTubeと複数媒体の経験が同時に積める",
+      "継続案件で長期的な仕事につながる可能性あり"
+    ],
+    "cautionPoints": [
+      "1本300円と非常に低単価でまとまった収益には多数の本数が必要",
+      "107人応募・22人契約済みと競争率が非常に高い",
+      "テスト案件からスタートで本採用まで評価待ちが必要"
+    ],
+    "workStyleNote": "Instagram・TikTok向け縦型30〜60秒編集＋YouTube向け美容施術動画。カット・テロップ・BGM。納期1週間以内。",
+    "futureNote": "医療・美容系動画の実績作りに活用できるが、競争率が高く単価も低い。ポートフォリオ目的での応募が現実的。",
+    "externalUrl": "https://crowdworks.jp/public/jobs/12850113",
+    "deadline": "2026-05-11"
   }
 ]
