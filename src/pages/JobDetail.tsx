@@ -6,6 +6,53 @@ import { loadConditions } from '../utils/session'
 import jobsRaw from '../data/jobs-beta.json'
 import { loadClickContext, logJobDetailViewed, logApplyClicked } from '../lib/logger'
 
+function getRecommendReason(job: JobWithScore): string {
+  const { workloadFit, jobScore, userFit, isContinuous, hourlyRate } = job
+  if (workloadFit < 40) return '稼働量が多く副業との両立には注意が必要な案件'
+  if (userFit < 40) return '実績・スキルのハードルが高め。中〜上級者向け'
+  if (workloadFit >= 70 && jobScore >= 70 && isContinuous)
+    return '副業として無理なく継続でき、安定収入が見込める'
+  if (workloadFit >= 70 && jobScore >= 70)
+    return '副業として取り組みやすく、案件の質も高い'
+  if (workloadFit >= 70 && isContinuous)
+    return '無理なく継続しやすい副業向きの案件'
+  if (jobScore >= 70 && hourlyRate >= 2000)
+    return '高単価だが稼働管理が鍵。スキルがあれば高収益'
+  if (userFit < 55 && jobScore >= 60)
+    return '案件の質は高いが実績要件あり。スキル確認を推奨'
+  if (isContinuous && jobScore >= 50)
+    return '継続発注が見込め、コツコツ稼ぎたい人に向いている'
+  if (hourlyRate < 500)
+    return '単価は低め。実績づくりや練習として活用するのがおすすめ'
+  return '条件次第で取り組みやすい標準的な案件'
+}
+
+function getDecisionPoints(job: JobWithScore): string[] {
+  const points: string[] = []
+  const { workloadFit, jobScore, userFit, compatibility, isContinuous, hourlyRate } = job
+  if (workloadFit >= 70)
+    points.push('副業として無理なく取り組みやすい案件です')
+  if (compatibility >= 70 && isContinuous)
+    points.push('継続性があり、安定収入につながる可能性があります')
+  if (userFit < 40)
+    points.push('スキル・実績要件が高く、応募前に内容を慎重に確認してください')
+  else if (userFit < 55 && jobScore >= 60)
+    points.push('単価は高めですが、実績・スキル要件も高いため慎重に判断してください')
+  if (hourlyRate < 500)
+    points.push('低単価のため、収益目的より練習・実績作り向きです')
+  if (workloadFit < 40)
+    points.push('稼働時間が多いため、本業や学業との両立には注意が必要です')
+  if (points.length === 0)
+    points.push('条件が合うか確認してから検討してみてください')
+  return points
+}
+
+function getDecisionMessage(overall_score: number): string {
+  if (overall_score >= 70) return '条件が合う場合は、早めに応募して問題ありません'
+  if (overall_score >= 50) return '他案件と比較してから判断するのもおすすめです'
+  return 'この案件は慎重に確認してから応募するのがおすすめです'
+}
+
 const jobs = jobsRaw as unknown as Job[]
 
 const replySpeedLabel: Record<string, string> = {
@@ -35,9 +82,8 @@ export default function JobDetail() {
     const userFit = calcUserFit(found, conditions)
     const workloadFit = calcWorkloadFit(found)
     const overall_score = calcCompatibility(found, conditions)
-    const scores = { workloadFit, jobScore, userFit, overall_score }
 
-    setJob({
+    const jobWithScores: JobWithScore = {
       ...found,
       jobScore,
       userFit,
@@ -46,10 +92,18 @@ export default function JobDetail() {
       difficulty: calcDifficulty(found),
       whoFitsThis: getWhoFitsThis(found),
       whyHardReasons: getWhyHardForUser(found, conditions),
-    })
+    }
+    setJob(jobWithScores)
 
     const ctx = loadClickContext(found.id)
-    logJobDetailViewed(found.id, ctx, scores)
+    logJobDetailViewed(found.id, ctx, {
+      workloadFit,
+      jobScore,
+      userFit,
+      overall_score,
+      recommendation_reason: getRecommendReason(jobWithScores),
+      decision_message: getDecisionMessage(overall_score),
+    })
   }, [id])
 
   if (!job) {
@@ -225,8 +279,33 @@ export default function JobDetail() {
         </Section>
       )}
 
+      {/* 応募判断のポイント */}
+      <Section title="応募判断のポイント">
+        <ul style={{ margin: 0, paddingLeft: 20 }}>
+          {getDecisionPoints(job).map((point, i) => (
+            <li key={i} style={{ marginBottom: 6, color: '#555', fontSize: 14, lineHeight: 1.5 }}>
+              {point}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
       {/* 応募導線 */}
       <div style={{ marginTop: 28, marginBottom: 32 }}>
+        <p
+          style={{
+            textAlign: 'center',
+            fontSize: 13,
+            color: '#555',
+            background: '#f5f5f5',
+            borderRadius: 6,
+            padding: '8px 12px',
+            marginBottom: 12,
+            marginTop: 0,
+          }}
+        >
+          {getDecisionMessage(job.compatibility)}
+        </p>
         <a
           href={job.externalUrl}
           target="_blank"
@@ -238,6 +317,8 @@ export default function JobDetail() {
               jobScore: job.jobScore,
               userFit: job.userFit,
               overall_score: job.compatibility,
+              recommendation_reason: getRecommendReason(job),
+              decision_message: getDecisionMessage(job.compatibility),
             })
           }}
           style={{

@@ -105,10 +105,19 @@ export function logJobsListViewed(payload: { ranked_jobs: RankedJob[] }): void {
   send('jobs_list_viewed', null, payload)
 }
 
+export interface ScorePayload {
+  workloadFit: number
+  jobScore: number
+  userFit: number
+  overall_score: number
+  recommendation_reason: string
+  decision_message: string
+}
+
 export function logJobDetailViewed(
   jobId: string,
   ctx: ClickContext | null,
-  scores: { workloadFit: number; jobScore: number; userFit: number; overall_score: number }
+  scores: ScorePayload
 ): void {
   send('job_detail_viewed', jobId, {
     position: ctx?.rank ?? null,
@@ -116,13 +125,15 @@ export function logJobDetailViewed(
     workloadFit: scores.workloadFit,
     jobScore: scores.jobScore,
     userFit: scores.userFit,
+    recommendation_reason: scores.recommendation_reason,
+    decision_message: scores.decision_message,
   })
 }
 
 export function logApplyClicked(
   jobId: string,
   ctx: ClickContext | null,
-  scores: { workloadFit: number; jobScore: number; userFit: number; overall_score: number }
+  scores: ScorePayload
 ): void {
   send('apply_clicked', jobId, {
     position: ctx?.rank ?? null,
@@ -130,5 +141,7 @@ export function logApplyClicked(
     workloadFit: scores.workloadFit,
     jobScore: scores.jobScore,
     userFit: scores.userFit,
+    recommendation_reason: scores.recommendation_reason,
+    decision_message: scores.decision_message,
   })
 }
