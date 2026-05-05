@@ -7,9 +7,10 @@ import {
   calcDifficulty,
   getWhoFitsThis,
   getWhyHardForUser,
+  isVideoEditingJob,
 } from '../lib/calcCompatibility'
 
-export { calcJobScore, calcUserFit, calcWorkloadFit, calcCompatibility, calcDifficulty, getWhoFitsThis, getWhyHardForUser }
+export { calcJobScore, calcUserFit, calcWorkloadFit, calcCompatibility, calcDifficulty, getWhoFitsThis, getWhyHardForUser, isVideoEditingJob }
 
 export function buildJobsWithScore(jobs: Job[], conditions: UserConditions): JobWithScore[] {
   return jobs

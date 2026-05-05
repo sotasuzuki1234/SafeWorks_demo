@@ -4,6 +4,7 @@ import type { Job, JobWithScore } from '../types'
 import { calcJobScore, calcUserFit, calcWorkloadFit, calcCompatibility, calcDifficulty, getWhoFitsThis, getWhyHardForUser } from '../utils/compatibility'
 import { loadConditions } from '../utils/session'
 import jobsRaw from '../data/jobs-beta.json'
+import type { ClickContext } from '../lib/logger'
 import { loadClickContext, logJobDetailViewed, logApplyClicked } from '../lib/logger'
 
 function getRecommendReason(job: JobWithScore): string {
@@ -27,12 +28,16 @@ function getRecommendReason(job: JobWithScore): string {
   return '条件次第で取り組みやすい標準的な案件'
 }
 
-function getDecisionPoints(job: JobWithScore): string[] {
+function getDecisionPoints(job: JobWithScore, rank?: number): string[] {
   const points: string[] = []
   const { workloadFit, jobScore, userFit, compatibility, isContinuous, hourlyRate } = job
+  if (rank === 1)
+    points.push('表示されている案件の中で最も副業に適した案件です')
+  else if (rank && rank <= 3)
+    points.push(`表示されている案件の中で副業適合度${rank}位の案件です`)
   if (workloadFit >= 70)
     points.push('副業として無理なく取り組みやすい案件です')
-  if (compatibility >= 70 && isContinuous)
+  if (compatibility >= 65 && isContinuous)
     points.push('継続性があり、安定収入につながる可能性があります')
   if (userFit < 40)
     points.push('スキル・実績要件が高く、応募前に内容を慎重に確認してください')
@@ -48,9 +53,10 @@ function getDecisionPoints(job: JobWithScore): string[] {
 }
 
 function getDecisionMessage(overall_score: number): string {
-  if (overall_score >= 70) return '条件が合う場合は、早めに応募して問題ありません'
-  if (overall_score >= 50) return '他案件と比較してから判断するのもおすすめです'
-  return 'この案件は慎重に確認してから応募するのがおすすめです'
+  if (overall_score >= 85) return 'この中で最も条件が良く、優先的に応募すべき案件です'
+  if (overall_score >= 65) return '条件は良いですが、他案件と比較して判断するのがおすすめです'
+  if (overall_score >= 40) return '条件面で注意が必要なため、慎重に判断してください'
+  return 'この案件はおすすめ条件を満たしていないため、慎重に検討してください'
 }
 
 const jobs = jobsRaw as unknown as Job[]
@@ -71,6 +77,7 @@ export default function JobDetail() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const [job, setJob] = useState<JobWithScore | null>(null)
+  const [clickCtx, setClickCtx] = useState<ClickContext | null>(null)
 
   useEffect(() => {
     const found = jobs.find((j) => j.id === id)
@@ -96,6 +103,7 @@ export default function JobDetail() {
     setJob(jobWithScores)
 
     const ctx = loadClickContext(found.id)
+    setClickCtx(ctx)
     logJobDetailViewed(found.id, ctx, {
       workloadFit,
       jobScore,
@@ -117,7 +125,7 @@ export default function JobDetail() {
     )
   }
 
-  const scoreColor = job.compatibility >= 70 ? '#2a7' : job.compatibility >= 40 ? '#f90' : '#c33'
+  const scoreColor = job.compatibility >= 85 ? '#2a7' : job.compatibility >= 65 ? '#f90' : '#c33'
   const today = new Date().toISOString().slice(0, 10)
   const isExpired = !!job.deadline && job.deadline < today
 
@@ -164,6 +172,11 @@ export default function JobDetail() {
         <div style={{ fontSize: 13, color: '#888', marginBottom: 4 }}>あなたへの適合率</div>
         <div style={{ fontSize: 48, fontWeight: 'bold', color: scoreColor }}>{job.compatibility}%</div>
         <div style={{ fontSize: 13, color: '#666', marginTop: 4, fontStyle: 'italic' }}>{job.fitReasonShort}</div>
+        {clickCtx?.rank && clickCtx.rank <= 5 && (
+          <div style={{ fontSize: 12, color: '#888', marginTop: 6 }}>
+            表示中の案件で <strong style={{ color: scoreColor }}>{clickCtx.rank}位</strong> の推奨度
+          </div>
+        )}
 
         {/* スコア内訳 */}
         <div
@@ -282,7 +295,7 @@ export default function JobDetail() {
       {/* 応募判断のポイント */}
       <Section title="応募判断のポイント">
         <ul style={{ margin: 0, paddingLeft: 20 }}>
-          {getDecisionPoints(job).map((point, i) => (
+          {getDecisionPoints(job, clickCtx?.rank ?? undefined).map((point, i) => (
             <li key={i} style={{ marginBottom: 6, color: '#555', fontSize: 14, lineHeight: 1.5 }}>
               {point}
             </li>

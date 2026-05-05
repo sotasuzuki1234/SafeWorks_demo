@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { Job, JobWithScore } from '../types'
 import { loadConditions } from '../utils/session'
-import { buildJobsWithScore } from '../utils/compatibility'
+import { buildJobsWithScore, isVideoEditingJob } from '../utils/compatibility'
 import jobsRaw from '../data/jobs-beta.json'
 import { logJobsListViewed, saveClickContext } from '../lib/logger'
 
 const today = new Date().toISOString().slice(0, 10)
+// 動画編集案件かつ募集期限内のもののみ表示
 const jobs = (jobsRaw as unknown as Job[]).filter(
-  (j) => !j.deadline || j.deadline >= today
+  (j) => isVideoEditingJob(j) && (!j.deadline || j.deadline >= today)
 )
 
 // ③ 最終更新情報
@@ -28,36 +29,28 @@ const replySpeedLabel: Record<string, string> = {
   slow: '返信遅め',
 }
 
-// ② おすすめ理由を userFit / jobScore / workloadFit / 継続性 / 単価 から生成
-function getRecommendReason(job: JobWithScore): string {
-  const { workloadFit, jobScore, userFit, isContinuous, hourlyRate } = job
-  if (workloadFit < 40) return '稼働量が多く副業との両立には注意が必要な案件'
-  if (userFit < 40) return '実績・スキルのハードルが高め。中〜上級者向け'
-  if (workloadFit >= 70 && jobScore >= 70 && isContinuous)
-    return '副業として無理なく継続でき、安定収入が見込める'
-  if (workloadFit >= 70 && jobScore >= 70)
-    return '副業として取り組みやすく、案件の質も高い'
-  if (workloadFit >= 70 && isContinuous)
-    return '無理なく継続しやすい副業向きの案件'
-  if (jobScore >= 70 && hourlyRate >= 2000)
-    return '高単価だが稼働管理が鍵。スキルがあれば高収益'
-  if (userFit < 55 && jobScore >= 60)
-    return '案件の質は高いが実績要件あり。スキル確認を推奨'
-  if (isContinuous && jobScore >= 50)
-    return '継続発注が見込め、コツコツ稼ぎたい人に向いている'
-  if (hourlyRate < 500)
-    return '単価は低め。実績づくりや練習として活用するのがおすすめ'
+// ② おすすめ理由：上位3件は順位ベースの相対比較、それ以外は絶対評価
+function getRecommendReason(job: JobWithScore, rank: number): string {
+  if (rank === 1) return 'この一覧で最も副業適合度が高い案件です'
+  if (rank === 2) return '副業適合度2位。単価・継続性を1位と比べて検討を'
+  if (rank === 3) return '副業適合度3位。条件を確認してから応募を'
+  if (job.workloadFit < 40) return '稼働量が多く副業との両立には注意が必要な案件'
+  if (job.userFit < 40) return '実績・スキルのハードルが高め。中〜上級者向け'
+  if (job.compatibility >= 65 && job.isContinuous) return '継続性があり安定収入が見込める。条件次第でおすすめ'
+  if (job.compatibility >= 65) return '副業として取り組みやすい条件が揃っている'
+  if (job.compatibility < 55) return '条件面で注意点あり。内容をよく確認してから判断を'
   return '条件次第で取り組みやすい標準的な案件'
 }
 
 function RecommendBadgeColor(job: JobWithScore): string {
   if (job.workloadFit < 40 || job.userFit < 40) return '#c33'
-  if (job.compatibility >= 70) return '#1a7'
-  return '#f90'
+  if (job.compatibility >= 85) return '#1a7'
+  if (job.compatibility >= 65) return '#f90'
+  return '#c33'
 }
 
 function ScoreBadge({ score }: { score: number }) {
-  const color = score >= 70 ? '#2a7' : score >= 40 ? '#f90' : '#c33'
+  const color = score >= 85 ? '#2a7' : score >= 65 ? '#f90' : '#c33'
   return (
     <span
       style={{
@@ -184,13 +177,13 @@ export default function JobsList() {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        {jobList.map((job) => (
+        {jobList.map((job, index) => (
           <div
             key={job.id}
             onClick={() => {
               saveClickContext({
                 job_id: job.id,
-                rank: jobList.indexOf(job) + 1,
+                rank: index + 1,
                 compatibility: job.compatibility,
                 workloadFit: job.workloadFit,
                 jobScore: job.jobScore,
@@ -227,7 +220,7 @@ export default function JobsList() {
               }}
             >
               <span>★</span>
-              <span>{getRecommendReason(job)}</span>
+              <span>{getRecommendReason(job, index + 1)}</span>
             </div>
 
             {/* スコア内訳バー */}

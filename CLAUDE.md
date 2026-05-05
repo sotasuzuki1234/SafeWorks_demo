@@ -156,5 +156,17 @@ grep '"externalUrl"' src/data/jobs-beta.json
 | job-072 | https://crowdworks.jp/public/jobs/13092613 | 2026-05-14 |
 | job-073 | https://crowdworks.jp/public/jobs/13022671 | 2026-05-14 |
 | job-074 | https://crowdworks.jp/public/jobs/13015932 | 2026-05-14 |
+| job-075 | https://crowdworks.jp/public/jobs/13102890 | 2026-05-19 |
+| job-076 | https://crowdworks.jp/public/jobs/13103640 | 2026-05-19 |
+| job-077 | https://crowdworks.jp/public/jobs/13103691 | 2026-05-19 |
+| job-078 | https://crowdworks.jp/public/jobs/13103584 | 2026-05-19 |
+| job-079 | https://crowdworks.jp/public/jobs/13102684 | 2026-05-19 |
+| job-080 | https://crowdworks.jp/public/jobs/13102812 | 2026-05-19 |
+| job-081 | https://crowdworks.jp/public/jobs/13102216 | 2026-05-18 |
+| job-082 | https://crowdworks.jp/public/jobs/13101423 | 2026-05-18 |
+| job-083 | https://crowdworks.jp/public/jobs/13099570 | 2026-05-17 |
+| job-084 | https://crowdworks.jp/public/jobs/13100710 | 2026-05-17 |
+| job-085 | https://crowdworks.jp/public/jobs/13100206 | 2026-05-17 |
+| job-086 | https://crowdworks.jp/public/jobs/13100015 | 2026-05-17 |
 
 > 案件を追加したら、このテーブルも更新すること。

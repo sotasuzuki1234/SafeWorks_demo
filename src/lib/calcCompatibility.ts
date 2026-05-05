@@ -5,6 +5,24 @@ function hasTag(job: Job, ...tags: string[]): boolean {
   return tags.some((t) => job.tags.includes(t) || job.cautionTags.includes(t))
 }
 
+// 動画編集案件か判定（title または tags に「動画編集」「動画」「編集」を含む）
+export function isVideoEditingJob(job: Job): boolean {
+  const keywords = ['動画編集', '動画', '編集']
+  return keywords.some(
+    (kw) =>
+      job.title.includes(kw) ||
+      job.tags.some((t) => t.includes(kw)) ||
+      job.cautionTags.some((t) => t.includes(kw))
+  )
+}
+
+// スコアを [50, 85] → [40, 100] に線形伸長してスコア差を拡大する
+// raw 67 → 69、raw 77 → 86、raw 80 → 91、raw 85 → 100
+function rescaleScore(raw: number): number {
+  const scaled = Math.round(40 + (raw - 50) * (60 / 35))
+  return Math.max(0, Math.min(100, scaled))
+}
+
 // ① jobScore: 案件自体の質スコア（ベース 50）
 // +20 高単価（時給3000円以上）
 // +10 継続案件
@@ -129,7 +147,7 @@ export function calcCompatibility(job: Job, conditions: UserConditions): number 
     score = Math.min(score, 50)
   }
 
-  return score
+  return rescaleScore(score)
 }
 
 // ⑤ difficulty 再設計

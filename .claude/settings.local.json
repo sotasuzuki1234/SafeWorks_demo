@@ -17,7 +17,9 @@
       "Bash(cmd /c \"npx tsc --noEmit 2>&1\")",
       "Bash(cmd:*)",
       "Bash(npm install *)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\sotas\\\\Desktop\\\\safeworks-beta\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)"
     ]
   }
 }
