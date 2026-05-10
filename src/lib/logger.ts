@@ -47,6 +47,9 @@ export interface RankedJob {
   job_id: string
   position: number
   overall_score: number
+  eligibility_tags: string[]
+  exhaustion_risk: '低' | '中' | '高'
+  client_trust_level: '高' | '中' | '要注意'
 }
 
 export function saveClickContext(ctx: ClickContext): void {
@@ -112,6 +115,9 @@ export interface ScorePayload {
   overall_score: number
   recommendation_reason: string
   decision_message: string
+  eligibility_tags: string[]
+  exhaustion_risk: '低' | '中' | '高'
+  client_trust_level: '高' | '中' | '要注意'
 }
 
 export function logJobDetailViewed(

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import type { Job, JobWithScore } from '../types'
 import { calcJobScore, calcUserFit, calcWorkloadFit, calcCompatibility, calcDifficulty, getWhoFitsThis, getWhyHardForUser } from '../utils/compatibility'
+import { getEligibilityTags, calcExhaustionRisk, calcClientTrust } from '../utils/jobTags'
 import { loadConditions } from '../utils/session'
 import jobsRaw from '../data/jobs-beta.json'
 import type { ClickContext } from '../lib/logger'
@@ -59,6 +60,12 @@ function getDecisionMessage(overall_score: number): string {
   return 'この案件はおすすめ条件を満たしていないため、慎重に検討してください'
 }
 
+// JST基準で今日の日付を取得
+function getTodayJST(): string {
+  const jst = new Date(Date.now() + 9 * 60 * 60 * 1000)
+  return jst.toISOString().slice(0, 10)
+}
+
 const jobs = jobsRaw as unknown as Job[]
 
 const replySpeedLabel: Record<string, string> = {
@@ -111,6 +118,9 @@ export default function JobDetail() {
       overall_score,
       recommendation_reason: getRecommendReason(jobWithScores),
       decision_message: getDecisionMessage(overall_score),
+      eligibility_tags: getEligibilityTags(found),
+      exhaustion_risk: calcExhaustionRisk(found),
+      client_trust_level: calcClientTrust(found),
     })
   }, [id])
 
@@ -126,28 +136,66 @@ export default function JobDetail() {
   }
 
   const scoreColor = job.compatibility >= 85 ? '#2a7' : job.compatibility >= 65 ? '#f90' : '#c33'
-  const today = new Date().toISOString().slice(0, 10)
-  const isExpired = !!job.deadline && job.deadline < today
+  const isExpired = !!job.deadline && job.deadline < getTodayJST()
 
-  return (
-    <div style={{ maxWidth: 480, margin: '0 auto', padding: '24px 16px' }}>
-      {/* 期限切れバナー */}
-      {isExpired && (
+  // 期限切れ案件は専用画面を表示
+  if (isExpired) {
+    return (
+      <div style={{ maxWidth: 480, margin: '0 auto', padding: '24px 16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20, gap: 12 }}>
+          <button
+            onClick={() => navigate('/jobs')}
+            style={{ border: 'none', background: 'none', cursor: 'pointer', fontSize: 20 }}
+          >
+            ←
+          </button>
+          <h1 style={{ fontSize: 18, margin: 0, flex: 1, lineHeight: 1.4, color: '#999' }}>
+            {job.title}
+          </h1>
+        </div>
         <div
           style={{
             background: '#fff3f3',
             border: '1px solid #f5c0c0',
-            borderRadius: 8,
-            padding: '10px 14px',
-            marginBottom: 16,
-            fontSize: 13,
-            color: '#c33',
-            fontWeight: 'bold',
+            borderRadius: 10,
+            padding: '20px 16px',
+            textAlign: 'center',
           }}
         >
-          この案件は応募期限（{job.deadline}）が過ぎています
+          <div style={{ fontSize: 32, marginBottom: 12 }}>⏰</div>
+          <div style={{ fontSize: 16, fontWeight: 'bold', color: '#c33', marginBottom: 8 }}>
+            この案件は募集が終了しています
+          </div>
+          <div style={{ fontSize: 13, color: '#888', marginBottom: 20 }}>
+            応募期限：{job.deadline}
+          </div>
+          <button
+            onClick={() => navigate('/jobs')}
+            style={{
+              padding: '12px 28px',
+              background: '#333',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 8,
+              fontSize: 15,
+              fontWeight: 'bold',
+              cursor: 'pointer',
+            }}
+          >
+            募集中の案件を見る →
+          </button>
         </div>
-      )}
+      </div>
+    )
+  }
+
+  const eligibilityTags = getEligibilityTags(job)
+  const exhaustionRisk = calcExhaustionRisk(job)
+  const clientTrust = calcClientTrust(job)
+
+  return (
+    <div style={{ maxWidth: 480, margin: '0 auto', padding: '24px 16px' }}>
+      {/* 期限切れバナーは上のifで処理済みのため不要 */}
       {/* ヘッダー */}
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20, gap: 12 }}>
         <button
@@ -192,6 +240,112 @@ export default function JobDetail() {
           <ScoreItem label="案件の質" score={job.jobScore} />
           <ScoreItem label="あなた向き" score={job.userFit} />
           <ScoreItem label="副業継続性" score={job.workloadFit} />
+        </div>
+      </div>
+
+      {/* 応募前チェック（3軸） */}
+      <div
+        style={{
+          background: '#fafafa',
+          border: '1px solid #eee',
+          borderRadius: 10,
+          padding: '14px 16px',
+          marginBottom: 20,
+        }}
+      >
+        <div style={{ fontSize: 13, fontWeight: 'bold', color: '#555', marginBottom: 12 }}>
+          応募前チェック
+        </div>
+
+        {/* ① 応募要件タグ */}
+        {eligibilityTags.length > 0 && (
+          <div style={{ marginBottom: 10 }}>
+            <div style={{ fontSize: 11, color: '#aaa', marginBottom: 4 }}>応募要件</div>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              {eligibilityTags.map((tag) => {
+                const isRequired = tag.includes('必須')
+                const isOk = tag.includes('OK') || tag.includes('あり') || tag.includes('可')
+                const bg = isRequired ? '#fff3f3' : isOk ? '#edfaf4' : '#f0f7ff'
+                const border = isRequired ? '#f5c0c0' : isOk ? '#b8ead6' : '#b8d4f0'
+                const color = isRequired ? '#c33' : isOk ? '#1a7' : '#1155aa'
+                return (
+                  <span
+                    key={tag}
+                    style={{
+                      fontSize: 13,
+                      background: bg,
+                      border: `1px solid ${border}`,
+                      borderRadius: 20,
+                      padding: '4px 10px',
+                      color,
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    {tag}
+                  </span>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* ② 消耗リスク + ③ クライアント信頼性 */}
+        <div style={{ display: 'flex', gap: 12 }}>
+          {/* 消耗リスク */}
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 11, color: '#aaa', marginBottom: 4 }}>消耗リスク</div>
+            {(() => {
+              const map = {
+                低: { color: '#1a7', bg: '#edfaf4', border: '#b8ead6', label: '低　負荷が軽い' },
+                中: { color: '#888', bg: '#f5f5f5', border: '#ddd', label: '中　標準的な作業量' },
+                高: { color: '#c33', bg: '#fff3f3', border: '#f5c0c0', label: '高　消耗しやすい' },
+              }
+              const s = map[exhaustionRisk]
+              return (
+                <div
+                  style={{
+                    background: s.bg,
+                    border: `1px solid ${s.border}`,
+                    borderRadius: 8,
+                    padding: '8px 12px',
+                    fontSize: 13,
+                    color: s.color,
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {s.label}
+                </div>
+              )
+            })()}
+          </div>
+
+          {/* クライアント信頼性 */}
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 11, color: '#aaa', marginBottom: 4 }}>クライアント</div>
+            {(() => {
+              const map = {
+                高: { color: '#1a7', bg: '#edfaf4', border: '#b8ead6', label: '高　信頼性あり' },
+                中: { color: '#888', bg: '#f5f5f5', border: '#ddd', label: '中　情報が限定的' },
+                要注意: { color: '#c93000', bg: '#fff8ee', border: '#ffd080', label: '要注意　確認を' },
+              }
+              const s = map[clientTrust]
+              return (
+                <div
+                  style={{
+                    background: s.bg,
+                    border: `1px solid ${s.border}`,
+                    borderRadius: 8,
+                    padding: '8px 12px',
+                    fontSize: 13,
+                    color: s.color,
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {s.label}
+                </div>
+              )
+            })()}
+          </div>
         </div>
       </div>
 
@@ -250,6 +404,31 @@ export default function JobDetail() {
 
       {/* クライアント情報 */}
       <Section title="クライアント情報">
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '6px 0',
+            borderBottom: '1px solid #eee',
+            marginBottom: 4,
+          }}
+        >
+          <span style={{ fontSize: 14, color: '#888' }}>信頼性</span>
+          <span
+            style={{
+              fontSize: 12,
+              fontWeight: 'bold',
+              color: clientTrust === '高' ? '#1a7' : clientTrust === '中' ? '#888' : '#c93000',
+              background: clientTrust === '高' ? '#edfaf4' : clientTrust === '中' ? '#f5f5f5' : '#fff8ee',
+              border: `1px solid ${clientTrust === '高' ? '#b8ead6' : clientTrust === '中' ? '#ddd' : '#ffd080'}`,
+              borderRadius: 20,
+              padding: '2px 10px',
+            }}
+          >
+            {clientTrust === '高' ? '高（信頼性あり）' : clientTrust === '中' ? '中（情報が限定的）' : '要注意（確認を）'}
+          </span>
+        </div>
         <InfoRow label="クライアント名" value={job.clientName} />
         <InfoRow label="返信速度" value={replySpeedLabel[job.responseSpeed]} />
         <InfoRow label="継続率" value={`${job.continuationRate}%`} />
@@ -332,6 +511,9 @@ export default function JobDetail() {
               overall_score: job.compatibility,
               recommendation_reason: getRecommendReason(job),
               decision_message: getDecisionMessage(job.compatibility),
+              eligibility_tags: getEligibilityTags(job),
+              exhaustion_risk: calcExhaustionRisk(job),
+              client_trust_level: calcClientTrust(job),
             })
           }}
           style={{
