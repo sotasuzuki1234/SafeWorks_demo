@@ -2525,5 +2525,607 @@
     "futureNote": "継続案件として週1本×4,000円=月16,000円のコンスタントな副収入が見込める。",
     "externalUrl": "https://crowdworks.jp/public/jobs/13100015",
     "deadline": "2026-05-17"
+  },
+  {
+    "id": "job-087",
+    "title": "【長期契約希望】Instagramリール編集｜健康・美容系が得意な動画編集者募集｜継続案件",
+    "clientName": "井上優佑",
+    "reward": 30000,
+    "estimatedHours": 10,
+    "hourlyRate": 3000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 80,
+    "revisionAverage": 2,
+    "tags": ["Instagram", "動画編集", "リール編集", "健康・美容", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "健康美容系リール編集の長期継続案件",
+    "goodPoints": [
+      "健康・美容ジャンル専門で単価安定",
+      "長期継続前提でテスト1本から始められる",
+      "医療機関クライアントで信頼性高い"
+    ],
+    "cautionPoints": [
+      "ポートフォリオ・過去実績の提出が必須",
+      "Zoom面談あり"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13163565",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-088",
+    "title": "【不動産×ルームツアー】物件紹介動画の編集者募集！！",
+    "clientName": "DFエステート株式会社",
+    "reward": 1000,
+    "estimatedHours": 1,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "不動産", "Instagram", "TikTok", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "物件紹介動画編集・月20本の安定発注",
+    "goodPoints": [
+      "月20本程度の安定した発注量",
+      "シンプルな編集内容で初心者でも対応可",
+      "企業クライアントで信頼性あり"
+    ],
+    "cautionPoints": [
+      "1本あたり1,000円前後と単価は低め"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/12809140",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-089",
+    "title": "未経験でも本業の方でもぜひご応募ください YouTube動画編集｜カット編集＋テロップ入れ",
+    "clientName": "Create K",
+    "reward": 4000,
+    "estimatedHours": 2,
+    "hourlyRate": 2000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["YouTube", "動画編集", "カット編集", "テロップ", "Premiere Pro", "継続案件", "未経験歓迎"],
+    "cautionTags": [],
+    "fitReasonShort": "未経験歓迎・素材提供ありのYouTube編集",
+    "goodPoints": [
+      "未経験〜経験者まで幅広く募集",
+      "素材・構成・完成イメージはクライアント提供",
+      "継続依頼を想定しており安定収入になりやすい"
+    ],
+    "cautionPoints": [
+      "納期3〜5日以内と比較的タイト"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13162207",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-090",
+    "title": "健康系ジャンルに強い編集者・ショート動画慣れしてる人募集",
+    "clientName": "井上優佑",
+    "reward": 30000,
+    "estimatedHours": 10,
+    "hourlyRate": 3000,
+    "isContinuous": false,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 60,
+    "revisionAverage": 2,
+    "tags": ["ショート動画", "動画編集", "健康系", "整骨院"],
+    "cautionTags": [],
+    "fitReasonShort": "整骨院向けショート動画、実績・面談必須",
+    "goodPoints": [
+      "健康・整骨院ジャンルの専門性が活かせる",
+      "ショート動画編集スキルの向上"
+    ],
+    "cautionPoints": [
+      "Zoom面談必須",
+      "実績・ポートフォリオの提示が必須"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13163555",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-091",
+    "title": "【動画制作×SNS運用】編集の「その先」へ｜制作スキルを武器に運用全般を支えるパートナー募集",
+    "clientName": "Ryo_sns.1",
+    "reward": 30000,
+    "estimatedHours": 10,
+    "hourlyRate": 3000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "SNS運用", "ショート動画", "企画・構成", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "動画制作＋SNS運用ハイブリッドの長期案件",
+    "goodPoints": [
+      "動画制作と運用の両スキルを同時に伸ばせる",
+      "長期パートナーとして安定した関係が期待できる",
+      "運用経験不問で動画制作力があれば参入可"
+    ],
+    "cautionPoints": [
+      "動画制作の基礎スキルが必須"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13162103",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-092",
+    "title": "10本3万円！フリー素材からの画像を入れてのナレーション動画制作",
+    "clientName": "hiball",
+    "reward": 3000,
+    "estimatedHours": 2,
+    "hourlyRate": 1500,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "ナレーション動画", "フリー素材", "テロップ", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "体験談読み上げ動画、月15本継続発注予定",
+    "goodPoints": [
+      "月10〜15本の安定した継続発注",
+      "台本は提供されるため企画不要",
+      "10本セット3万円で収入が見込みやすい"
+    ],
+    "cautionPoints": [
+      "トライアルは100円と非常に低単価",
+      "動画編集ソフトの経験が必須"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13163060",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-093",
+    "title": "【継続案件/高単価】動画編集者募集【Premiere Pro / After Effects経験者優遇】",
+    "clientName": "ジュークボックス",
+    "reward": 5000,
+    "estimatedHours": 2,
+    "hourlyRate": 2500,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 2,
+    "tags": ["Premiere Pro", "After Effects", "YouTube", "動画編集", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "Premiere Pro必須の高単価継続YouTube編集",
+    "goodPoints": [
+      "月10本以上の安定発注",
+      "Premiere Pro・AE経験者は単価アップの可能性",
+      "5,000〜10,000円/本の高単価"
+    ],
+    "cautionPoints": [
+      "テスト案件は100円",
+      "ポートフォリオ提出を推奨"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13162122",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-094",
+    "title": "動画編集やYouTube運用/TikTok運用に挑戦したい方を募集します",
+    "clientName": "sns1123",
+    "reward": 2000,
+    "estimatedHours": 1,
+    "hourlyRate": 2000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "YouTube", "TikTok", "SNS運用", "初心者歓迎", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "スキル不要・初回レクチャーありの初心者向け案件",
+    "goodPoints": [
+      "スキル不要で初心者でも応募可能",
+      "初回レクチャー付きで安心してスタートできる",
+      "継続案件として安定収入が見込める"
+    ],
+    "cautionPoints": [
+      "初回報酬は500円と低め"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13163015",
+    "deadline": "2026-05-25"
+  },
+  {
+    "id": "job-095",
+    "title": "【猫ミーム】YMM（ゆっくりムービーメーカー）を使った動画制作のお仕事です【YouTube】",
+    "clientName": "teranishu_",
+    "reward": 3300,
+    "estimatedHours": 2,
+    "hourlyRate": 1650,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "YMM4", "猫ミーム", "YouTube", "継続案件"],
+    "cautionTags": ["納期2日以内"],
+    "fitReasonShort": "YMM4で猫ミーム動画制作、素材・台本提供あり",
+    "goodPoints": [
+      "台本・素材・マニュアルが全て提供される",
+      "継続案件で安定した受注が期待できる"
+    ],
+    "cautionPoints": [
+      "YMM4（Windowsソフト）が必須",
+      "納期が依頼日から2日以内と短め"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13160687",
+    "deadline": "2026-05-24"
+  },
+  {
+    "id": "job-096",
+    "title": "フィモーラFilmora動画編集。継続的にお願いできる方",
+    "clientName": "sakuraterrace",
+    "reward": 20000,
+    "estimatedHours": 5,
+    "hourlyRate": 4000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "Filmora", "企業動画", "会社紹介", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "Filmora使用の企業紹介ムービー制作案件",
+    "goodPoints": [
+      "会社説明会用の企業案件で実績になる",
+      "Filmoraを使うため特別な高度スキル不要",
+      "継続前提で安定収入"
+    ],
+    "cautionPoints": [
+      "Filmora使用が必須条件"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13160965",
+    "deadline": "2026-05-24"
+  },
+  {
+    "id": "job-097",
+    "title": "【在宅OK】YouTube動画編集スタッフ募集｜未経験歓迎・マニュアルあり",
+    "clientName": "sisizzi",
+    "reward": 3000,
+    "estimatedHours": 2,
+    "hourlyRate": 1500,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 2,
+    "tags": ["YouTube", "動画編集", "在宅", "未経験歓迎", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "マニュアルあり・未経験歓迎のYouTube動画編集",
+    "goodPoints": [
+      "マニュアルとテンプレートで未経験でも取り組みやすい",
+      "週1本〜OKで副業に最適",
+      "慣れれば継続して依頼してもらえる"
+    ],
+    "cautionPoints": [],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13161830",
+    "deadline": "2026-05-24"
+  },
+  {
+    "id": "job-098",
+    "title": "1分前後の演者が語る系動画の動画編集者様を募集！【長期継続】",
+    "clientName": "ごちょメディア",
+    "reward": 1300,
+    "estimatedHours": 1,
+    "hourlyRate": 1300,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "ショート動画", "テロップ", "AI顔変更", "継続案件"],
+    "cautionTags": ["AI顔変更ツール使用"],
+    "fitReasonShort": "演者語り系ショート動画、月20本の長期継続",
+    "goodPoints": [
+      "月20本前後の安定した継続発注",
+      "長期継続前提で安定収入が見込める"
+    ],
+    "cautionPoints": [
+      "テスト案件は300円と低単価",
+      "AI顔変更ツール（akool）の操作が必要"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13161554",
+    "deadline": "2026-05-24"
+  },
+  {
+    "id": "job-099",
+    "title": "【テスト案件/1,000円】動画編集の簡単なサポート作業（Premiere Pro使用）",
+    "clientName": "長谷川陽平",
+    "reward": 1000,
+    "estimatedHours": 1,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["Premiere Pro", "動画編集", "テロップ", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "評価4.9クライアントのPremiere Pro編集サポート",
+    "goodPoints": [
+      "評価4.9・27件レビューの信頼できるクライアント",
+      "テスト案件が1,000円と適切な報酬",
+      "継続可能性あり"
+    ],
+    "cautionPoints": [
+      "電話対応が必須条件",
+      "細かいマニュアルなく映像内の指示で作業"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13159493",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-100",
+    "title": "未経験歓迎します Instagram運用｜相談しやすい環境で一緒に成長できるアシスタント募集",
+    "clientName": "Hashi.ss",
+    "reward": 30000,
+    "estimatedHours": 10,
+    "hourlyRate": 3000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 75,
+    "revisionAverage": 1,
+    "tags": ["Instagram運用", "SNS運用", "未経験歓迎", "継続案件", "アカウント運用代行"],
+    "cautionTags": [],
+    "fitReasonShort": "未経験歓迎のInstagram運用アシスタント募集",
+    "goodPoints": [
+      "未経験歓迎・丁寧なマニュアルとサポートあり",
+      "長期継続で安定収入が見込める",
+      "相談しやすい環境で成長できる"
+    ],
+    "cautionPoints": [],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13160443",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-101",
+    "title": "【動画編集の制作サポート】継続OK◎｜フルリモート｜YouTube・SNS等",
+    "clientName": "r.ka",
+    "reward": 1000,
+    "estimatedHours": 1,
+    "hourlyRate": 1000,
+    "isContinuous": true,
+    "difficulty": "beginner",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 1,
+    "tags": ["動画編集", "Premiere Pro", "ショート動画", "フルリモート", "継続案件", "初心者歓迎"],
+    "cautionTags": [],
+    "fitReasonShort": "ポートフォリオ不要・初心者向けの動画編集サポート",
+    "goodPoints": [
+      "スキル不要・ポートフォリオ不要で応募しやすい",
+      "フルリモートで完全在宅対応可",
+      "継続的に取り組める環境"
+    ],
+    "cautionPoints": [
+      "単価500円〜1,000円と低め"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13160122",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-102",
+    "title": "【継続あり】ビジネス系YouTube動画の編集者募集！",
+    "clientName": "daom",
+    "reward": 5000,
+    "estimatedHours": 3,
+    "hourlyRate": 1667,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["YouTube", "動画編集", "ビジネス系", "Premiere Pro", "継続案件"],
+    "cautionTags": ["週25時間以上リソース必要"],
+    "fitReasonShort": "ビジネス系YouTube編集、週25時間のリソース必要",
+    "goodPoints": [
+      "継続案件で安定した収入",
+      "ビジネス系専門スキルが身につく"
+    ],
+    "cautionPoints": [
+      "週25時間以上のリソース確保が必要",
+      "Premiere Pro必須・5本以上の編集経験が条件",
+      "テスト案件は無報酬"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13159805",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-103",
+    "title": "【継続・安定】ビジネス動画制作パートナー募集｜将来のディレクター候補歓迎！",
+    "clientName": "福田俊彦",
+    "reward": 7000,
+    "estimatedHours": 3,
+    "hourlyRate": 2333,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 80,
+    "revisionAverage": 2,
+    "tags": ["Premiere Pro", "動画編集", "ビジネス動画", "YouTube", "継続案件", "ディレクター"],
+    "cautionTags": [],
+    "fitReasonShort": "ビジネス動画制作、ディレクター候補も歓迎",
+    "goodPoints": [
+      "安定した継続発注で中長期の収入が見込める",
+      "ディレクションへのキャリアアップ支援あり",
+      "7,000〜18,000円/本の高単価"
+    ],
+    "cautionPoints": [
+      "Premiere Pro実務経験とビジネス系動画実績が必須"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13159686",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-104",
+    "title": "TikTok運用者募集",
+    "clientName": "宮内 望実",
+    "reward": 30000,
+    "estimatedHours": 10,
+    "hourlyRate": 3000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["TikTok", "SNS運用", "動画撮影", "動画編集", "大阪"],
+    "cautionTags": ["大阪での撮影対応必須"],
+    "fitReasonShort": "TikTok運用全般、既存1.3万フォロワーアカウント",
+    "goodPoints": [
+      "既に1.3万フォロワーのアカウントで運用実績が作れる",
+      "撮影・編集・投稿・分析の全工程を経験可能"
+    ],
+    "cautionPoints": [
+      "大阪での撮影対応が必須",
+      "面談・テストを経て正式契約"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13160503",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-105",
+    "title": "【継続あり】ビジネス系YouTube動画の編集者募集！",
+    "clientName": "daom",
+    "reward": 5000,
+    "estimatedHours": 3,
+    "hourlyRate": 1667,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 70,
+    "revisionAverage": 2,
+    "tags": ["YouTube", "動画編集", "ビジネス系", "Premiere Pro", "継続案件"],
+    "cautionTags": ["週25時間以上リソース必要"],
+    "fitReasonShort": "ビジネス系YouTube編集の継続案件",
+    "goodPoints": [
+      "継続案件で安定した収入",
+      "ビジネス系編集スキルが身につく"
+    ],
+    "cautionPoints": [
+      "週25時間以上のリソース確保が必要",
+      "Premiere Pro必須・5本以上の編集経験が条件",
+      "テスト案件は無報酬"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13159804",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-106",
+    "title": "【動画編集経験者限定】SNS広告の動画制作・編集のお仕事│継続あり",
+    "clientName": "トマト仕事依頼アカウント",
+    "reward": 3000,
+    "estimatedHours": 2,
+    "hourlyRate": 1500,
+    "isContinuous": true,
+    "difficulty": "advanced",
+    "responseSpeed": "fast",
+    "continuationRate": 75,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "SNS広告", "ショート動画", "TikTok", "Instagram", "継続案件"],
+    "cautionTags": ["経験者限定"],
+    "fitReasonShort": "SNS広告動画制作、経験者限定で継続発注あり",
+    "goodPoints": [
+      "継続依頼あり・クオリティ次第で安定受注",
+      "SNS広告動画の専門スキルが身につく"
+    ],
+    "cautionPoints": [
+      "初心者・経験浅い方は応募不可",
+      "納期2〜3日以内と短め"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13160252",
+    "deadline": "2026-05-23"
+  },
+  {
+    "id": "job-107",
+    "title": "AIアニメーションお願いできる方",
+    "clientName": "sakuraterrace",
+    "reward": 500000,
+    "estimatedHours": 50,
+    "hourlyRate": 10000,
+    "isContinuous": false,
+    "difficulty": "advanced",
+    "responseSpeed": "normal",
+    "continuationRate": 50,
+    "revisionAverage": 3,
+    "tags": ["AI動画", "アニメーション", "動画編集", "イラスト", "高単価"],
+    "cautionTags": [],
+    "fitReasonShort": "AI活用アニメーションCM制作・50万円〜の高単価",
+    "goodPoints": [
+      "50万円〜の高単価案件",
+      "AI動画スキルを存分に活かせる"
+    ],
+    "cautionPoints": [
+      "高難易度・ポートフォリオ必須",
+      "応募時点で既に14名が応募済み"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13155579",
+    "deadline": "2026-05-22"
+  },
+  {
+    "id": "job-108",
+    "title": "【1本2万円 ショート動画作成】広告用動画の編集、制作できる方を募集",
+    "clientName": "Lelia10",
+    "reward": 22000,
+    "estimatedHours": 5,
+    "hourlyRate": 4400,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "normal",
+    "continuationRate": 65,
+    "revisionAverage": 2,
+    "tags": ["動画編集", "Premiere Pro", "広告動画", "ショート動画", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "広告用ショート動画・1本22,000円の高単価",
+    "goodPoints": [
+      "1本22,000円と高単価",
+      "台本提供あり・素材選定も含むスキルアップ",
+      "相性次第で継続受注の可能性あり"
+    ],
+    "cautionPoints": [
+      "AI活用スキルと商用素材の選定能力が必要",
+      "Premiere Pro必須"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13158282",
+    "deadline": "2026-05-22"
+  },
+  {
+    "id": "job-109",
+    "title": "【1本10,000円～30,000円】ビジネス系YouTubeの動画編集",
+    "clientName": "ariga ryota",
+    "reward": 10000,
+    "estimatedHours": 5,
+    "hourlyRate": 2000,
+    "isContinuous": true,
+    "difficulty": "intermediate",
+    "responseSpeed": "fast",
+    "continuationRate": 80,
+    "revisionAverage": 2,
+    "tags": ["YouTube", "動画編集", "Premiere Pro", "After Effects", "ビジネス系", "継続案件"],
+    "cautionTags": [],
+    "fitReasonShort": "評価5.0クライアントの高単価ビジネスYouTube編集",
+    "goodPoints": [
+      "評価5.0・7件レビューの信頼性高いクライアント",
+      "1本1万〜3万円の高単価",
+      "月1〜3本ペースで副業に最適"
+    ],
+    "cautionPoints": [
+      "Premiere Pro必須・AE対応で単価アップ",
+      "テスト案件は500円"
+    ],
+    "externalUrl": "https://crowdworks.jp/public/jobs/13155482",
+    "deadline": "2026-05-22"
   }
 ]

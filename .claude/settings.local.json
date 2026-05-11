@@ -19,7 +19,10 @@
       "Bash(npm install *)",
       "Bash(powershell *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\sotas\\\\Desktop\\\\safeworks-beta\" -Recurse -Directory)",
-      "Bash(Select-Object -ExpandProperty FullName)"
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Get-Content \"C:\\\\Users\\\\sotas\\\\Desktop\\\\safeworks-beta\\\\src\\\\data\\\\jobs-beta.json\")",
+      "Bash(Select-Object -Last 30)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
