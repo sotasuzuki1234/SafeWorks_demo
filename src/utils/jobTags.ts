@@ -67,6 +67,26 @@ export function getEligibilityTags(job: Job): string[] {
   )
     result.push('テスト単価あり')
 
+  // 継続依頼（ポジティブ）
+  if (job.isContinuous)
+    result.push('継続依頼あり')
+
+  // 作業内容タグ（参考情報）
+  if (inAnyText(job, '構成作成'))
+    result.push('構成作成あり')
+  if (inAnyText(job, '図解'))
+    result.push('図解作成あり')
+  if (inAnyText(job, 'AI音声') || inAnyText(job, '音声合成'))
+    result.push('AI音声作成あり')
+
+  // 消耗注意タグ（警告）
+  if (job.estimatedHours >= 8)
+    result.push('工数重め注意')
+  if (job.revisionAverage >= 3)
+    result.push('修正多め注意')
+  if (inAnyText(job, '自由編集') || job.cautionTags.includes('自由編集'))
+    result.push('自由編集注意')
+
   return result
 }
 

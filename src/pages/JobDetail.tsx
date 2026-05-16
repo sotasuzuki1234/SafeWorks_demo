@@ -10,54 +10,54 @@ import { loadClickContext, logJobDetailViewed, logApplyClicked } from '../lib/lo
 
 function getRecommendReason(job: JobWithScore): string {
   const { workloadFit, jobScore, userFit, isContinuous, hourlyRate } = job
-  if (workloadFit < 40) return '稼働量が多く副業との両立には注意が必要な案件'
-  if (userFit < 40) return '実績・スキルのハードルが高め。中〜上級者向け'
+  if (workloadFit < 40) return '稼働量が多く、副業との両立で消耗しやすい可能性があります'
+  if (userFit < 40) return 'スキル・実績のハードルが高め。中〜上級者向けです'
   if (workloadFit >= 70 && jobScore >= 70 && isContinuous)
-    return '副業として無理なく継続でき、安定収入が見込める'
+    return '素材や台本があり工数を読みやすく、継続依頼で安定収入も見込めます'
   if (workloadFit >= 70 && jobScore >= 70)
-    return '副業として取り組みやすく、案件の質も高い'
+    return '作業範囲が明確で、副業として無理なく取り組みやすい案件です'
   if (workloadFit >= 70 && isContinuous)
-    return '無理なく継続しやすい副業向きの案件'
+    return '継続依頼が見込め、無理なく続けやすい副業向きの案件です'
   if (jobScore >= 70 && hourlyRate >= 2000)
-    return '高単価だが稼働管理が鍵。スキルがあれば高収益'
+    return '高単価ですが稼働管理が鍵。工数を事前に確認することをおすすめします'
   if (userFit < 55 && jobScore >= 60)
-    return '案件の質は高いが実績要件あり。スキル確認を推奨'
+    return '案件の質は高いですが実績要件があります。スキル確認を推奨します'
   if (isContinuous && jobScore >= 50)
-    return '継続発注が見込め、コツコツ稼ぎたい人に向いている'
+    return '継続発注が見込め、コツコツ稼ぎたい方に向いています'
   if (hourlyRate < 500)
-    return '単価は低め。実績づくりや練習として活用するのがおすすめ'
-  return '条件次第で取り組みやすい標準的な案件'
+    return '単価は低め。実績づくりや練習として活用するのがおすすめです'
+  return '条件次第で取り組みやすい案件です'
 }
 
 function getDecisionPoints(job: JobWithScore, rank?: number): string[] {
   const points: string[] = []
   const { workloadFit, jobScore, userFit, compatibility, isContinuous, hourlyRate } = job
   if (rank === 1)
-    points.push('表示されている案件の中で最も副業に適した案件です')
+    points.push('表示されている案件の中で最も消耗しにくく、副業に適した案件です')
   else if (rank && rank <= 3)
-    points.push(`表示されている案件の中で副業適合度${rank}位の案件です`)
+    points.push(`消耗しにくさ${rank}位の案件です。他の案件と比較して検討してみてください`)
   if (workloadFit >= 70)
-    points.push('副業として無理なく取り組みやすい案件です')
+    points.push('作業範囲が読みやすく、副業として無理なく取り組みやすい案件です')
   if (compatibility >= 65 && isContinuous)
-    points.push('継続性があり、安定収入につながる可能性があります')
+    points.push('継続依頼が見込め、安定して収入を得やすい案件です')
   if (userFit < 40)
-    points.push('スキル・実績要件が高く、応募前に内容を慎重に確認してください')
+    points.push('スキル・実績要件が高いため、応募前に内容を慎重に確認してください')
   else if (userFit < 55 && jobScore >= 60)
-    points.push('単価は高めですが、実績・スキル要件も高いため慎重に判断してください')
+    points.push('単価は高めですが実績・スキル要件もあります。慎重に判断してください')
   if (hourlyRate < 500)
-    points.push('低単価のため、収益目的より練習・実績作り向きです')
+    points.push('低単価のため、収益よりも練習・実績づくり向きです')
   if (workloadFit < 40)
-    points.push('稼働時間が多いため、本業や学業との両立には注意が必要です')
+    points.push('稼働時間が多く消耗しやすいため、本業との両立に注意してください')
   if (points.length === 0)
     points.push('条件が合うか確認してから検討してみてください')
   return points
 }
 
 function getDecisionMessage(overall_score: number): string {
-  if (overall_score >= 85) return 'この中で最も条件が良く、優先的に応募すべき案件です'
-  if (overall_score >= 65) return '条件は良いですが、他案件と比較して判断するのがおすすめです'
-  if (overall_score >= 40) return '条件面で注意が必要なため、慎重に判断してください'
-  return 'この案件はおすすめ条件を満たしていないため、慎重に検討してください'
+  if (overall_score >= 85) return '消耗しにくさ・継続性ともに高く、優先的に検討したい案件です'
+  if (overall_score >= 65) return '副業として続けやすい条件です。他案件とも比較してみてください'
+  if (overall_score >= 40) return '工数や条件に注意が必要です。内容をよく確認してから判断してください'
+  return '消耗しやすい要素があります。内容を慎重に確認してから判断してください'
 }
 
 // JST基準で今日の日付を取得
@@ -217,7 +217,7 @@ export default function JobDetail() {
           marginBottom: 20,
         }}
       >
-        <div style={{ fontSize: 13, color: '#888', marginBottom: 4 }}>あなたへの適合率</div>
+        <div style={{ fontSize: 13, color: '#888', marginBottom: 4 }}>副業として続けやすいか</div>
         <div style={{ fontSize: 48, fontWeight: 'bold', color: scoreColor }}>{job.compatibility}%</div>
         <div style={{ fontSize: 13, color: '#666', marginTop: 4, fontStyle: 'italic' }}>{job.fitReasonShort}</div>
         {clickCtx?.rank && clickCtx.rank <= 5 && (

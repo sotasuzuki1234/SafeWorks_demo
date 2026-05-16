@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div style={{ maxWidth: 480, margin: '0 auto', padding: '24px 16px' }}>
       <h1 style={{ fontSize: 22, marginBottom: 4 }}>SafeWorks β</h1>
-      <p style={{ color: '#666', marginBottom: 32 }}>動画編集案件の判断補助ツール</p>
+      <p style={{ color: '#666', marginBottom: 32 }}>消耗しにくい副業案件を選ぶための判断ツール</p>
 
       <section style={{ marginBottom: 24 }}>
         <label style={{ display: 'block', fontWeight: 'bold', marginBottom: 8 }}>

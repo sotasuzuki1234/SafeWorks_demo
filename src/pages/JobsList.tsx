@@ -8,7 +8,6 @@ import {
   calcExhaustionRisk,
   calcClientTrust,
   getJobTier,
-  TIER_LABELS,
 } from '../utils/jobTags'
 import jobsRaw from '../data/jobs-beta.json'
 import { logJobsListViewed, saveClickContext } from '../lib/logger'
@@ -40,14 +39,14 @@ const replySpeedLabel: Record<string, string> = {
 }
 
 function getRecommendReason(job: JobWithScore, rank: number): string {
-  if (rank === 1) return 'この一覧で最も副業適合度が高い案件です'
-  if (rank === 2) return '副業適合度2位。単価・継続性を1位と比べて検討を'
-  if (rank === 3) return '副業適合度3位。条件を確認してから応募を'
-  if (job.workloadFit < 40) return '稼働量が多く副業との両立には注意が必要な案件'
-  if (job.userFit < 40) return '実績・スキルのハードルが高め。中〜上級者向け'
-  if (job.compatibility >= 65 && job.isContinuous) return '継続性があり安定収入が見込める。条件次第でおすすめ'
-  if (job.compatibility >= 65) return '副業として取り組みやすい条件が揃っている'
-  if (job.compatibility < 55) return '条件面で注意点あり。内容をよく確認してから判断を'
+  if (rank === 1) return 'この一覧で最も消耗しにくい案件です'
+  if (rank === 2) return '消耗しにくさ2位。単価・継続性を1位と比較してみてください'
+  if (rank === 3) return '消耗しにくさ3位。条件を確認してから応募を'
+  if (job.workloadFit < 40) return '稼働量が多く、消耗しやすい可能性があります'
+  if (job.userFit < 40) return 'スキル・実績のハードルが高め。中〜上級者向け'
+  if (job.compatibility >= 65 && job.isContinuous) return '素材や工数が読みやすく、継続依頼で安定収入も見込めます'
+  if (job.compatibility >= 65) return '作業範囲が明確で、副業として無理なく続けやすい案件です'
+  if (job.compatibility < 55) return '工数や条件に注意点あり。内容をよく確認してから判断を'
   return '条件次第で取り組みやすい標準的な案件'
 }
 
@@ -94,11 +93,13 @@ function ScoreBar({ label, score }: { label: string; score: number }) {
 }
 
 function EligibilityTag({ label }: { label: string }) {
-  const isRequired = label.includes('必須')
-  const isOk = label.includes('OK') || label.includes('あり') || label.includes('可')
-  const bg = isRequired ? '#fff3f3' : isOk ? '#edfaf4' : '#f0f7ff'
-  const border = isRequired ? '#f5c0c0' : isOk ? '#b8ead6' : '#b8d4f0'
-  const color = isRequired ? '#c33' : isOk ? '#1a7' : '#1155aa'
+  const isWarning = label.includes('注意')
+  const isRequired = !isWarning && label.includes('必須')
+  const isOk = !isWarning && !isRequired && (label.includes('OK') || label.includes('あり') || label.includes('可'))
+  const bg = isWarning ? '#fff8ee' : isRequired ? '#fff3f3' : isOk ? '#edfaf4' : '#f0f7ff'
+  const border = isWarning ? '#ffd080' : isRequired ? '#f5c0c0' : isOk ? '#b8ead6' : '#b8d4f0'
+  const color = isWarning ? '#c93000' : isRequired ? '#c33' : isOk ? '#1a7' : '#1155aa'
+  const prefix = isWarning ? '⚠ ' : ''
   return (
     <span
       style={{
@@ -112,7 +113,7 @@ function EligibilityTag({ label }: { label: string }) {
         whiteSpace: 'nowrap',
       }}
     >
-      {label}
+      {prefix}{label}
     </span>
   )
 }
@@ -162,14 +163,17 @@ function ClientTrustBadge({ trust }: { trust: '高' | '中' | '要注意' }) {
         whiteSpace: 'nowrap',
       }}
     >
-      CL: {trust}
+      信頼性: {trust}
     </span>
   )
 }
 
 function TierDivider({ tier }: { tier: 0 | 1 | 2 }) {
-  if (tier === 0) return null
-  const info = TIER_LABELS[tier]
+  const tierInfo = {
+    0: { text: '✓ 消耗しにくい案件', color: '#1a7', bg: '#edfaf4' },
+    1: { text: '△ 工数・条件に注意が必要な案件', color: '#f90', bg: '#fff8ee' },
+    2: { text: '▼ 消耗リスクが高い案件', color: '#c33', bg: '#fff3f3' },
+  }[tier]
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8, margin: '8px 0 4px' }}>
       <div style={{ flex: 1, height: 1, background: '#e0e0e0' }} />
@@ -177,15 +181,15 @@ function TierDivider({ tier }: { tier: 0 | 1 | 2 }) {
         style={{
           fontSize: 11,
           fontWeight: 'bold',
-          color: info.color,
-          background: info.bg,
-          border: `1px solid ${info.color}33`,
+          color: tierInfo.color,
+          background: tierInfo.bg,
+          border: `1px solid ${tierInfo.color}33`,
           borderRadius: 20,
           padding: '2px 10px',
           whiteSpace: 'nowrap',
         }}
       >
-        {tier === 1 ? '▼ 条件次第の案件' : '▼ 注意が必要な案件'}
+        {tierInfo.text}
       </span>
       <div style={{ flex: 1, height: 1, background: '#e0e0e0' }} />
     </div>
@@ -241,7 +245,7 @@ export default function JobsList() {
         >
           ←
         </button>
-        <h1 style={{ fontSize: 20, margin: 0 }}>案件一覧</h1>
+        <h1 style={{ fontSize: 20, margin: 0 }}>消耗しにくい案件 一覧</h1>
       </div>
 
       <div
@@ -277,7 +281,7 @@ export default function JobsList() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         {jobList.map((job, index) => {
           const tier = getJobTier(job.compatibility)
-          const showDivider = tier !== prevTier && tier > 0
+          const showDivider = tier !== prevTier
           prevTier = tier
 
           const eligibilityTags = getEligibilityTags(job)
