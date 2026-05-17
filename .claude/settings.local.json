@@ -23,7 +23,8 @@
       "Bash(Get-Content \"C:\\\\Users\\\\sotas\\\\Desktop\\\\safeworks-beta\\\\src\\\\data\\\\jobs-beta.json\")",
       "Bash(Select-Object -Last 30)",
       "Bash(python3 -c ' *)",
-      "Bash(Get-ChildItem *)"
+      "Bash(Get-ChildItem *)",
+      "Bash(Get-Content *)"
     ]
   }
 }
